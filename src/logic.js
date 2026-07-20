@@ -1,15 +1,15 @@
 export const QUESTION_LABELS = {
-  name: 'この電車はどれ？',
+  name: 'この電車の形式・愛称は？',
   series: 'この車両の形式は？',
   operator: 'この車両の鉄道会社は？',
-  line: 'この車両が主に走る路線は？',
+  line: 'この電車が主に走る路線は？',
 }
 
 export const answerFor = (train, type) => {
   if (type === 'series') return train.series
   if (type === 'operator') return train.operator
   if (type === 'line') return train.mainLines[0]
-  return train.shortName
+  return train.name
 }
 
 export const seededRandom = (seed = Date.now()) => {
@@ -29,11 +29,7 @@ export const shuffle = (items, random = Math.random) => {
   return copy
 }
 
-export const questionTypeFor = (difficulty, index) => {
-  if (difficulty === 'easy') return 'name'
-  if (difficulty === 'normal') return ['name', 'series', 'operator'][index % 3]
-  return ['series', 'operator', 'line'][index % 3]
-}
+export const questionTypeFor = (train) => ['通勤電車', '地下鉄'].includes(train.category) ? 'line' : 'name'
 
 const candidateScore = (correct, candidate, difficulty) => {
   if (difficulty === 'easy') {
@@ -80,8 +76,8 @@ export const buildQuestionSet = (allTrains, difficulty, options = {}) => {
     : shuffle(difficultyPool, random)
   const unique = Array.from(new Map(source.map((train) => [train.id, train])).values()).slice(0, count)
   if (unique.length < count) throw new Error(`${difficulty}の問題が${count}件必要です`)
-  return unique.map((train, index) => {
-    const type = questionTypeFor(reviewIds.length ? train.difficulty : difficulty, index)
+  return unique.map((train) => {
+    const type = questionTypeFor(train)
     return {
       trainId: train.id,
       type,
@@ -135,6 +131,8 @@ export const validateTrainData = (allTrains) => {
     if (train.hints.length !== 3) errors.push(`${train.id}: ヒントは3件必要です`)
     if (train.distinguishingPoints.length < 3) errors.push(`${train.id}: 見分け方が不足しています`)
     if (!train.imageCredit?.license) errors.push(`${train.id}: 画像ライセンスがありません`)
+    if (!train.mainLines?.length) errors.push(`${train.id}: 路線情報がありません`)
+    if (questionTypeFor(train) === 'name' && !train.name.includes(train.series)) errors.push(`${train.id}: 正式名称に形式が含まれていません`)
   }
   return errors
 }

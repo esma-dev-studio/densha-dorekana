@@ -1,5 +1,6 @@
 const STORAGE_KEY = 'densha-dorekana-progress-v1'
 const SESSION_KEY = 'densha-dorekana-session-v1'
+const SESSION_CONTENT_VERSION = 2
 
 export const defaultProgress = () => ({
   version: 1,
@@ -29,8 +30,15 @@ export const loadProgress = () => {
 
 export const saveProgress = (progress) => localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
 
-export const loadSession = () => safeParse(localStorage.getItem(SESSION_KEY), null)
-export const saveSession = (session) => localStorage.setItem(SESSION_KEY, JSON.stringify(session))
+export const loadSession = () => {
+  const session = safeParse(localStorage.getItem(SESSION_KEY), null)
+  if (session && session.contentVersion !== SESSION_CONTENT_VERSION) {
+    localStorage.removeItem(SESSION_KEY)
+    return null
+  }
+  return session
+}
+export const saveSession = (session) => localStorage.setItem(SESSION_KEY, JSON.stringify({ ...session, contentVersion: SESSION_CONTENT_VERSION }))
 export const clearSession = () => localStorage.removeItem(SESSION_KEY)
 
 export const applyCompletedSession = (progress, session) => {

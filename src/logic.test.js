@@ -2,9 +2,11 @@ import { describe, expect, it } from 'vitest'
 import { imageCredits } from './data/imageCredits.js'
 import { trains } from './data/trains.js'
 import {
+  answerFor,
   buildQuestionSet,
   generateOptions,
   pointsForHints,
+  questionTypeFor,
   resultTitle,
   selectReviewIds,
   validateTrainData,
@@ -38,7 +40,19 @@ describe('train quiz data and game logic', () => {
       expect(new Set(questions.map((question) => question.trainId)).size).toBe(10)
       expect(questions.every((question) => question.options.length === 4)).toBe(true)
       expect(questions.every((question) => new Set(question.options).size === 4)).toBe(true)
+      expect(questions.every((question) => question.type === questionTypeFor(trains.find((train) => train.id === question.trainId)))).toBe(true)
     }
+  })
+
+  it('asks formal names for named trains and routes for ordinary trains', () => {
+    const vse = trains.find((train) => train.id === 'odakyu-vse')
+    const yamanote = trains.find((train) => train.id === 'e235-yamanote')
+    expect(questionTypeFor(vse)).toBe('name')
+    expect(answerFor(vse, 'name')).toBe('小田急50000形 VSE')
+    expect(questionTypeFor(yamanote)).toBe('line')
+    expect(answerFor(yamanote, 'line')).toBe('山手線')
+    expect(trains.filter((train) => questionTypeFor(train) === 'name').length).toBeGreaterThan(10)
+    expect(trains.filter((train) => questionTypeFor(train) === 'line').length).toBeGreaterThan(10)
   })
 
   it('never creates duplicate or multiple-correct option labels', () => {

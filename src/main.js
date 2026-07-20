@@ -90,7 +90,7 @@ const renderHome = () => {
       <div class="hero-copy">
         <p class="route-label"><span>観察</span><b>▶</b><span>発見</span><b>▶</b><span>電車博士</span></p>
         <h1>写真をよく見て、<br><em>電車のちがい</em>を発見しよう。</h1>
-        <p>色・ライト・窓・先頭の形。答えたあとに見分け方が分かる、全30車種の電車クイズです。</p>
+        <p>色・ライト・窓・先頭の形。正式な形式・愛称と走る路線まで分かる、全30車種の電車クイズです。</p>
         <button class="primary-action" data-start="easy">かんたんから出発 <span>→</span></button>
       </div>
       <div class="hero-photo">
@@ -104,6 +104,11 @@ const renderHome = () => {
 
     <section class="level-section" aria-labelledby="level-title">
       <div class="section-heading"><div><p>CHOOSE YOUR COURSE</p><h2 id="level-title">難易度をえらぶ</h2></div><span>各コース10問・同じ問題は出ません</span></div>
+      <div class="quiz-format-guide" aria-label="出題ルール">
+        <span>出題ルール</span>
+        <p><strong>新幹線・特急</strong><small>E5系 はやぶさ、小田急50000形 VSEなど</small>形式＋愛称を当てる</p>
+        <p><strong>通勤電車・地下鉄</strong><small>山手線、中央線快速、半蔵門線など</small>主に走る路線を当てる</p>
+      </div>
       <div class="difficulty-list">${difficultyCards}</div>
     </section>
 
@@ -203,7 +208,7 @@ const renderQuiz = () => {
         <div class="observation-tip"><span>観察ポイント</span><p>まずは答えを見ずに、<b>色・ライト・窓・先頭の形</b>を順番に見てみよう。</p></div>
       </div>
       <div class="question-column">
-        <p class="question-type">QUESTION ${String(session.currentIndex + 1).padStart(2, '0')}</p>
+        <p class="question-type">QUESTION ${String(session.currentIndex + 1).padStart(2, '0')} ／ ${question.type === 'line' ? '路線を当てる' : '形式＋愛称を当てる'}</p>
         <h1>${QUESTION_LABELS[question.type]}</h1>
         <p class="keyboard-note">数字キー 1〜4 でも答えられます</p>
         <div class="answer-grid">${choices}</div>
@@ -236,6 +241,7 @@ const feedbackPanel = (train, answer, correctAnswer) => {
   return `<section class="answer-feedback ${answer.correct ? 'is-correct' : 'is-wrong'}" aria-live="polite">
     <div class="feedback-result"><span>${answer.correct ? '○' : '△'}</span><div><small>${answer.correct ? `+${answer.points} POINTS` : 'OBSERVATION CHANCE'}</small><h2>${escapeHtml(title)}</h2><p>${escapeHtml(train.name)} ／ ${escapeHtml(train.operator)}</p></div></div>
     <div class="learning-card">
+      <div><small>正式な形式・愛称</small><strong>${escapeHtml(train.name)}</strong><span>${escapeHtml(train.operator)}</span></div>
       <div><small>主な路線・地域</small><strong>${escapeHtml(train.mainLines.join('・'))}</strong><span>${escapeHtml(train.region)}</span></div>
       <div><small>ここを見分ける</small><ul>${train.distinguishingPoints.map((point) => `<li>${escapeHtml(point)}</li>`).join('')}</ul></div>
       <div><small>豆知識</small><p>${escapeHtml(train.trivia)}</p></div>

@@ -276,9 +276,9 @@ const entries = [
 ]
 
 export const difficultyLabels = {
-  easy: { label: 'かんたん', note: '色や形が大きく違う、有名な電車', color: '#17875b' },
-  normal: { label: 'ふつう', note: '同じ用途の電車から見分ける', color: '#126f9a' },
-  hard: { label: 'むずかしい', note: '形式・会社・路線まで観察する', color: '#a45a17' },
+  easy: { label: 'かんたん', note: '有名な新幹線・特急の「形式＋愛称」', color: '#17875b' },
+  normal: { label: 'ふつう', note: '特急の名称と、通勤電車の路線', color: '#126f9a' },
+  hard: { label: 'むずかしい', note: '通勤電車・地下鉄が走る路線', color: '#a45a17' },
 }
 
 export const trains = entries.map((entry) => {
