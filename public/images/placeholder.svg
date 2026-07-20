@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">実車写真準備中</title>
+  <desc id="desc">電車の実車写真がまだ用意できていないことを示すプレースホルダー</desc>
+  <rect width="1200" height="720" fill="#e9eef1"/>
+  <path d="M0 590h1200v130H0z" fill="#dce4e8"/>
+  <path d="M155 532h890" stroke="#8798a3" stroke-width="12"/>
+  <path d="M180 569h840" stroke="#60727d" stroke-width="8" stroke-dasharray="34 24"/>
+  <path d="M286 252c0-44 36-80 80-80h410c72 0 138 35 179 94l65 94v144H251V360z" fill="#fff" stroke="#17384c" stroke-width="14"/>
+  <path d="M770 196c56 0 108 27 140 73l50 72H770z" fill="#b8dce7" stroke="#17384c" stroke-width="12"/>
+  <path d="M342 224h150v117H342zm185 0h150v117H527z" fill="#b8dce7" stroke="#17384c" stroke-width="12"/>
+  <path d="M251 403h769" stroke="#14865c" stroke-width="28"/>
+  <circle cx="391" cy="506" r="50" fill="#17384c"/>
+  <circle cx="843" cy="506" r="50" fill="#17384c"/>
+  <circle cx="391" cy="506" r="22" fill="#dce4e8"/>
+  <circle cx="843" cy="506" r="22" fill="#dce4e8"/>
+  <text x="600" y="655" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="42" fill="#17384c">実車写真 準備中</text>
+</svg>
