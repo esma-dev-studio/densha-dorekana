@@ -16,16 +16,16 @@ import {
 } from './logic.js'
 
 describe('train quiz data and game logic', () => {
-  it('contains 30 valid trains split evenly across three difficulties', () => {
-    expect(trains).toHaveLength(30)
+  it('contains 45 valid trains with at least ten per difficulty', () => {
+    expect(trains).toHaveLength(45)
     expect(validateTrainData(trains)).toEqual([])
     for (const difficulty of ['easy', 'normal', 'hard']) {
-      expect(trains.filter((train) => train.difficulty === difficulty)).toHaveLength(10)
+      expect(trains.filter((train) => train.difficulty === difficulty).length).toBeGreaterThanOrEqual(10)
     }
   })
 
   it('has a licensed local photo and attribution for every train', () => {
-    expect(Object.keys(imageCredits)).toHaveLength(30)
+    expect(Object.keys(imageCredits)).toHaveLength(trains.length)
     for (const train of trains) {
       const credit = imageCredits[train.id]
       expect(credit).toBeDefined()

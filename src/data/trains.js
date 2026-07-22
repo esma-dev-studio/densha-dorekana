@@ -1,4 +1,5 @@
 import { imageCredits } from './imageCredits.js'
+import { regionalTrains } from './regionalTrains.js'
 
 const entries = [
   {
@@ -281,7 +282,7 @@ export const difficultyLabels = {
   hard: { label: 'むずかしい', note: '通勤電車・地下鉄が走る路線', color: '#a45a17' },
 }
 
-export const trains = entries.map((entry) => {
+export const trains = [...entries, ...regionalTrains].map((entry) => {
   const credit = imageCredits[entry.id]
   return {
     ...entry,

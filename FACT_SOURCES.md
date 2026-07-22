@@ -26,6 +26,20 @@
 - [阪神 5700系](https://www.hanshin.co.jp/fans/car/)
 - [名鉄 9500系](https://www.meitetsu.co.jp/library/rolling_stock/detail_exp/9500.html)
 
+## 東京・神奈川の追加車両
+
+- [JR東日本 E233系](https://www.jreast.co.jp/train/local/e233.html)
+- [東急 2020系](https://www.tokyu.co.jp/railway/trains/01/)
+- [小田急 子ども向け車両図鑑](https://www.odakyu.jp/kids/train/)
+- [京王 現役車両図鑑 5000系](https://www.keio.co.jp/keiofan/museum/exist/)
+- [都営浅草線 5500形](https://www.kotsu.metro.tokyo.jp/pickup_information/news/subway/2016/sub_p_201612065973_h.html)
+- [都営三田線 6500形](https://www.kotsu.metro.tokyo.jp/pickup_information/news/subway/2022/sub_p_2022012710265_h.html)
+- [東京メトロ 現役車両](https://www.tokyometro.jp/corporate/enterprise/passenger_rail/cars/working/index.html)
+- [東京メトロ 銀座線1000系](https://www.tokyometro.jp/corporate/enterprise/passenger_rail/cars/working/ginza_1000/index.html)
+- [東京メトロ 丸ノ内線2000系](https://www.tokyometro.jp/corporate/enterprise/passenger_rail/cars/working/marunouchi_2000/index.html)
+- [横浜市営地下鉄 ブルーライン4000形](https://www.city.yokohama.lg.jp/kotsu/sub/oshirase/4000model.html)
+- [横浜市営地下鉄 車両紹介](https://www.city.yokohama.lg.jp/kotsu/tanoshimou/otanoshimi/sharyosyoukai.html)
+- [江ノ電 300形](https://www.enoden.co.jp/fan/museum/vehicle/300/)
 ## 画像
 
 - [Wikimedia Commons: Reusing content outside Wikimedia](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia/en)

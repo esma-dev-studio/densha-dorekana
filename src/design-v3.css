@@ -1170,7 +1170,7 @@ p { line-height: 1.8; }
   content: '';
   pointer-events: none;
 }
-.card-photo img { height: 230px; object-fit: cover; }
+.card-photo img { height: 230px; object-fit: contain; object-position: center; }
 .card-photo > span {
   z-index: 2;
   top: 13px;

@@ -6,6 +6,7 @@ import html
 import json
 import re
 import ssl
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -85,6 +86,24 @@ def choose_candidate(query: str) -> dict | None:
     return max(candidates, key=lambda page: score_candidate(page, query), default=None)
 
 
+def exact_candidate(file_title: str) -> dict | None:
+    data = api_json({
+        "action": "query",
+        "titles": file_title,
+        "prop": "imageinfo",
+        "iiprop": "url|size|mime|extmetadata",
+        "iiurlwidth": 1280,
+    })
+    page = next(iter(data.get("query", {}).get("pages", [])), None)
+    if not page:
+        return None
+    info = page.get("imageinfo", [{}])[0]
+    license_name = info.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "")
+    if not info.get("thumburl") or not any(marker in license_name.lower() for marker in ALLOWED_LICENSE_MARKERS):
+        return None
+    return page
+
+
 def download_webp(url: str, destination: Path) -> None:
     hostname = urllib.parse.urlparse(url).hostname or ""
     if hostname != "upload.wikimedia.org" and not hostname.endswith(".wikimedia.org"):
@@ -114,20 +133,21 @@ def main() -> None:
         except (IndexError, json.JSONDecodeError):
             credits = {}
     failures: list[str] = []
+    refresh_ids = set(sys.argv[1:])
 
     for index, item in enumerate(manifest, start=1):
         train_id = item["id"]
         query = item["query"]
         print(f"[{index:02}/{len(manifest)}] {train_id}: {query}", flush=True)
         output = IMAGE_DIR / f"{train_id}.webp"
-        if output.exists() and credits.get(train_id, {}).get("license") != "プレースホルダー":
+        if output.exists() and train_id not in refresh_ids and credits.get(train_id, {}).get("license") != "プレースホルダー":
             print("  cached", flush=True)
             continue
         try:
             page = None
             for attempt in range(4):
                 try:
-                    page = choose_candidate(query)
+                    page = exact_candidate(item["fileTitle"]) if item.get("fileTitle") else choose_candidate(query)
                     break
                 except urllib.error.HTTPError as error:
                     if error.code != 429 or attempt == 3:

@@ -1,32 +1,204 @@
 [
-  { "id": "e5-hayabusa", "query": "E5 series Shinkansen Hayabusa" },
-  { "id": "e6-komachi", "query": "E6 series Shinkansen Komachi" },
-  { "id": "n700s", "query": "N700S Shinkansen" },
-  { "id": "500-shinkansen", "query": "500 series Shinkansen" },
-  { "id": "doctor-yellow", "query": "Doctor Yellow 923 series" },
-  { "id": "e235-yamanote", "query": "E235 Yamanote Line train" },
-  { "id": "e259-nex", "query": "E259 Narita Express train" },
-  { "id": "285-sunrise", "query": "285 series Sunrise Express train" },
-  { "id": "odakyu-gse", "query": "Odakyu 70000 GSE Romancecar" },
-  { "id": "spacia-x", "query": "Tobu N100 Spacia X train" },
-  { "id": "e353-azusa", "query": "E353 Azusa train" },
-  { "id": "e261-saphir", "query": "E261 Saphir Odoriko train" },
-  { "id": "e657-hitachi", "query": "E657 Hitachi train" },
-  { "id": "keikyu-n1000", "query": "Keikyu N1000 train" },
-  { "id": "tokyu-5050", "query": "Tokyu 5050 series train" },
-  { "id": "odakyu-vse", "query": "Odakyu 50000 VSE Romancecar" },
-  { "id": "seibu-laview", "query": "Seibu 001 Laview train" },
-  { "id": "kintetsu-hinotori", "query": "Kintetsu 80000 Hinotori train" },
-  { "id": "nankai-rapit", "query": "Nankai 50000 Rapi:t train" },
-  { "id": "keisei-skyliner", "query": "Keisei AE Skyliner train" },
-  { "id": "e233-chuo", "query": "JR East E233 Chuo Line train" },
-  { "id": "e231-500", "query": "JR East E231-500 train" },
-  { "id": "jrwest-225-100", "query": "JR West 225-100 series train" },
-  { "id": "jrwest-323", "query": "JR West 323 Osaka Loop Line train" },
-  { "id": "metro-17000", "query": "Tokyo Metro 17000 series train" },
-  { "id": "metro-18000", "query": "Tokyo Metro 18000 series train" },
-  { "id": "hankyu-1000", "query": "Hankyu 1000 series train" },
-  { "id": "hanshin-5700", "query": "Hanshin 5700 series train" },
-  { "id": "sotetsu-20000", "query": "Sotetsu 20000 series train" },
-  { "id": "meitetsu-9500", "query": "Meitetsu 9500 series train" }
+    {
+        "id":  "e5-hayabusa",
+        "query":  "E5 series Shinkansen Hayabusa"
+    },
+    {
+        "id":  "e6-komachi",
+        "query":  "E6 series Shinkansen Komachi"
+    },
+    {
+        "id":  "n700s",
+        "query":  "N700S Shinkansen",
+        "fileTitle":  "File:JRC N700S series J1.jpg"
+    },
+    {
+        "id":  "500-shinkansen",
+        "query":  "500 series Shinkansen"
+    },
+    {
+        "id":  "doctor-yellow",
+        "query":  "Doctor Yellow 923 series"
+    },
+    {
+        "id":  "e235-yamanote",
+        "query":  "E235 Yamanote Line train"
+    },
+    {
+        "id":  "e259-nex",
+        "query":  "E259 Narita Express train"
+    },
+    {
+        "id":  "285-sunrise",
+        "query":  "285 series Sunrise Express train"
+    },
+    {
+        "id":  "odakyu-gse",
+        "query":  "Odakyu 70000 GSE Romancecar",
+        "fileTitle":  "File:Odakyu-Series70000 GSE.jpg"
+    },
+    {
+        "id":  "spacia-x",
+        "query":  "Tobu N100 Spacia X train"
+    },
+    {
+        "id":  "e353-azusa",
+        "query":  "E353 Azusa train"
+    },
+    {
+        "id":  "e261-saphir",
+        "query":  "E261 Saphir Odoriko train"
+    },
+    {
+        "id":  "e657-hitachi",
+        "query":  "E657 Hitachi train"
+    },
+    {
+        "id":  "keikyu-n1000",
+        "query":  "Keikyu N1000 train",
+        "fileTitle":  "File:Keikyu 1216-1209 leaving Shinagawa (20230803181147).jpg"
+    },
+    {
+        "id":  "tokyu-5050",
+        "query":  "Tokyu 5050 series train"
+    },
+    {
+        "id":  "odakyu-vse",
+        "query":  "Odakyu 50000 VSE Romancecar"
+    },
+    {
+        "id":  "seibu-laview",
+        "query":  "Seibu 001 Laview train"
+    },
+    {
+        "id":  "kintetsu-hinotori",
+        "query":  "Kintetsu 80000 Hinotori train",
+        "fileTitle":  "File:Kintetsu 80000 series \"Hinotori\" 2022-04-02.jpg"
+    },
+    {
+        "id":  "nankai-rapit",
+        "query":  "Nankai 50000 Rapi:t train"
+    },
+    {
+        "id":  "keisei-skyliner",
+        "query":  "Keisei AE Skyliner train"
+    },
+    {
+        "id":  "e233-chuo",
+        "query":  "JR East E233 Chuo Line train",
+        "fileTitle":  "File:Chuo Line E233 series T27 Tokyo 20091218.jpg"
+    },
+    {
+        "id":  "e231-500",
+        "query":  "JR East E231-500 train"
+    },
+    {
+        "id":  "jrwest-225-100",
+        "query":  "JR West 225-100 series train"
+    },
+    {
+        "id":  "jrwest-323",
+        "query":  "JR West 323 Osaka Loop Line train",
+        "fileTitle":  "File:323系電車(大阪城公園駅).jpg"
+    },
+    {
+        "id":  "metro-17000",
+        "query":  "Tokyo Metro 17000 series train",
+        "fileTitle":  "File:Tokyo Metro 17000 17102F in Fujimino Station 01.jpg"
+    },
+    {
+        "id":  "metro-18000",
+        "query":  "Tokyo Metro 18000 series train"
+    },
+    {
+        "id":  "hankyu-1000",
+        "query":  "Hankyu 1000 series train"
+    },
+    {
+        "id":  "hanshin-5700",
+        "query":  "Hanshin 5700 series train"
+    },
+    {
+        "id":  "sotetsu-20000",
+        "query":  "Sotetsu 20000 series train"
+    },
+    {
+        "id":  "meitetsu-9500",
+        "query":  "Meitetsu 9500 series train"
+    },
+    {
+        "id":  "e233-keihin",
+        "query":  "JR East E233-1000 Keihin Tohoku Negishi Line train",
+        "fileTitle":  "File:E233-1000 Kanda 20080422.JPG"
+    },
+    {
+        "id":  "e233-yokohama",
+        "query":  "JR East E233-6000 Yokohama Line train",
+        "fileTitle":  "File:JR East E233-6000 Series H015 20191124.jpg"
+    },
+    {
+        "id":  "e233-nambu",
+        "query":  "JR East E233-8000 Nambu Line train",
+        "fileTitle":  "File:Nambu Line E233-8000 Series.JPG"
+    },
+    {
+        "id":  "e235-yokosuka",
+        "query":  "JR East E235-1000 Yokosuka Line train",
+        "fileTitle":  "File:Series E235-1000 F-05 in Yokosuka Station 02.jpg"
+    },
+    {
+        "id":  "e131-sagami",
+        "query":  "JR East E131-500 Sagami Line train",
+        "fileTitle":  "File:Series-E131-500 G07.jpg"
+    },
+    {
+        "id":  "tokyu-2020",
+        "query":  "Tokyu 2020 series Den-en-toshi Line train",
+        "fileTitle":  "File:Tokyu 2020 series set 2121 Jimmuji Station 20171128.jpg"
+    },
+    {
+        "id":  "odakyu-5000",
+        "query":  "Odakyu 5000 series 2019 train",
+        "fileTitle":  "File:小田急5000形2代目.jpg"
+    },
+    {
+        "id":  "keio-5000",
+        "query":  "Keio 5000 series 2017 train",
+        "fileTitle":  "File:Keio-n5000-wiki.jpg"
+    },
+    {
+        "id":  "toei-5500",
+        "query":  "Toei 5500 series Asakusa Line train",
+        "fileTitle":  "File:Toei 5500 series Keisei Main Line 20190308.jpg"
+    },
+    {
+        "id":  "toei-6500",
+        "query":  "Toei 6500 series Mita Line train",
+        "fileTitle":  "File:Toei Series6500-6502.jpg"
+    },
+    {
+        "id":  "metro-1000",
+        "query":  "Tokyo Metro 1000 series Ginza Line train",
+        "fileTitle":  "File:Tokyo Metro 1000.jpg"
+    },
+    {
+        "id":  "metro-2000",
+        "query":  "Tokyo Metro 2000 series Marunouchi Line train",
+        "fileTitle":  "File:TokyoMetro 2000 Marunouchi-line.jpg"
+    },
+    {
+        "id":  "yokohama-4000",
+        "query":  "Yokohama Subway 4000 Blue Line train",
+        "fileTitle":  "File:Yokohama-Subway Series4000-4661.jpg"
+    },
+    {
+        "id":  "yokohama-10000",
+        "query":  "Yokohama Subway 10000 Green Line train",
+        "fileTitle":  "File:Yokohama-City-Subway 10121.jpg"
+    },
+    {
+        "id":  "enoden-300",
+        "query":  "Enoden 300 series train",
+        "fileTitle":  "File:Enoshima Electric Railway 300 Series 305.jpg"
+    }
 ]

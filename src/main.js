@@ -59,7 +59,7 @@ const achievementCatalog = [
   { id: 'discover-10', icon: '☆', name: '車両ウォッチャー', note: '10種類に正解', test: (state) => Object.values(state.trainStats).filter((stats) => stats.correct > 0).length >= 10 },
   { id: 'master-5', icon: '★', name: '見分けの達人', note: '5種類を習熟度3へ', test: (state) => Object.values(state.trainStats).filter((stats) => masteryLevel(stats) === 3).length >= 5 },
   { id: 'daily-3', icon: '3D', name: '3日連続乗車', note: '今日の3問を3日連続クリア', test: (state) => state.daily.streak >= 3 },
-  { id: 'all-lines', icon: '30', name: '電車博士', note: '30種類すべてに正解', test: (state) => Object.values(state.trainStats).filter((stats) => stats.correct > 0).length >= trains.length },
+  { id: 'all-lines', icon: 'ALL', name: '電車博士', note: `${trains.length}種類すべてに正解`, test: (state) => Object.values(state.trainStats).filter((stats) => stats.correct > 0).length >= trains.length },
 ]
 
 const syncAchievements = (state) => {
@@ -158,11 +158,11 @@ const renderHome = () => {
   shell(`
     <section class="home-hero">
       <div class="hero-copy">
-        <p class="hero-kicker"><span aria-hidden="true">●</span> 30しゅるいの電車に会える！</p>
+        <p class="hero-kicker"><span aria-hidden="true">●</span> ${trains.length}しゅるいの電車に会える！</p>
         <h1>どの電車か、<br><em>わかるかな？</em></h1>
         <p>写真の「色・かたち・ライト」をよく見て、電車の名前や走る路線を当てよう。遊ぶほど、電車博士に近づくよ。</p>
         <button class="primary-action hero-action" data-start="easy"><span class="action-icon" aria-hidden="true">▶</span><span class="action-copy"><small>まずは かんたん10問</small><strong>電車クイズに出発！</strong></span><span class="action-arrow" aria-hidden="true">→</span></button>
-        <div class="hero-facts" aria-label="アプリの特長"><span><b>30</b>種類</span><span><b>3</b>レベル</span><span><b>2</b>分から</span></div>
+        <div class="hero-facts" aria-label="アプリの特長"><span><b>${trains.length}</b>種類</span><span><b>3</b>レベル</span><span><b>2</b>分から</span></div>
       </div>
       <div class="hero-photo">
         ${trainImage(heroTrain, '', true)}
@@ -182,7 +182,7 @@ const renderHome = () => {
       <article class="passport-card">
         <div class="passport-top"><div><small>TRAIN PASSPORT</small><strong>LV.${rank.level} ${rank.name}</strong></div><span>${progress.xp} XP</span></div>
         <div class="rank-progress" role="progressbar" aria-label="次のレベルまで" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${rank.value}"><i style="width:${rank.value}%"></i></div>
-        <div class="passport-stats"><span>発見 <b>${learned}/30</b></span><span>マスター <b>${mastered}/30</b></span><span>連続乗車 <b>${progress.daily.streak}日</b></span></div>
+        <div class="passport-stats"><span>発見 <b>${learned}/${trains.length}</b></span><span>マスター <b>${mastered}/${trains.length}</b></span><span>連続乗車 <b>${progress.daily.streak}日</b></span></div>
       </article>
       <article class="recommend-card">
         <p>${nextAction.eyebrow}</p><h2>${nextAction.title}</h2><span>${nextAction.note}</span>
@@ -221,7 +221,7 @@ const renderHome = () => {
         <button data-view="stats">くわしい成績を見る →</button>
       </article>
       <article class="library-teaser">
-        <div><p class="panel-kicker">見つけた電車をコレクション</p><h2>30種類の電車ずかん</h2><p>新幹線から地方私鉄まで、見分け方と豆知識を収録。</p><button data-view="collection">ずかんを見にいく →</button></div>
+        <div><p class="panel-kicker">見つけた電車をコレクション</p><h2>${trains.length}種類の電車ずかん</h2><p>新幹線から地方私鉄まで、見分け方と豆知識を収録。</p><button data-view="collection">ずかんを見にいく →</button></div>
         <div class="mini-line-map" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </article>
     </section>
@@ -512,7 +512,7 @@ const renderCollection = () => {
       && matchesStatus
   })
   shell(`
-    <section class="page-intro"><p class="route-label"><span>LIBRARY</span><b>▶</b><span>30 TRAINS</span></p><h1>電車図鑑</h1><p>写真と観察ポイントを見比べて、3段階の習熟度を上げよう。</p></section>
+    <section class="page-intro"><p class="route-label"><span>LIBRARY</span><b>▶</b><span>${trains.length} TRAINS</span></p><h1>電車図鑑</h1><p>写真と観察ポイントを見比べて、3段階の習熟度を上げよう。</p></section>
     <section class="collection-toolbar" aria-label="図鑑の絞り込み">
       <label class="search-filter">検索<input data-filter="query" type="search" value="${escapeHtml(collectionFilters.query)}" placeholder="名前・会社・路線"></label>
       <label>種類<select data-filter="category"><option value="all">すべて</option>${categories.map((value) => `<option ${collectionFilters.category === value ? 'selected' : ''}>${escapeHtml(value)}</option>`).join('')}</select></label>
@@ -520,7 +520,7 @@ const renderCollection = () => {
       <label>難易度<select data-filter="difficulty"><option value="all">すべて</option>${Object.entries(difficultyLabels).map(([key, item]) => `<option value="${key}" ${collectionFilters.difficulty === key ? 'selected' : ''}>${item.label}</option>`).join('')}</select></label>
       <label>記録<select data-filter="status"><option value="all">すべて</option><option value="cleared" ${collectionFilters.status === 'cleared' ? 'selected' : ''}>正解済み</option><option value="mastered" ${collectionFilters.status === 'mastered' ? 'selected' : ''}>マスター</option><option value="saved" ${collectionFilters.status === 'saved' ? 'selected' : ''}>復習リスト</option><option value="locked" ${collectionFilters.status === 'locked' ? 'selected' : ''}>未正解</option></select></label>
       <label class="silhouette-switch"><input type="checkbox" id="silhouette-toggle" ${progress.silhouetteLocked ? 'checked' : ''}> 未正解をシルエット表示</label>
-      <strong>${filtered.length}<small> / 30種類</small></strong>
+      <strong>${filtered.length}<small> / ${trains.length}種類</small></strong>
     </section>
     <section class="train-grid">${filtered.map(collectionCard).join('')}</section>
   `, 'collection-page')
@@ -575,14 +575,14 @@ const renderStats = () => {
     <section class="passport-hero">
       <div class="passport-level"><span>LV.${rank.level}</span><div><small>CURRENT RANK</small><h2>${rank.name}</h2><p>${progress.xp} XP ${rank.next ? `／ 次のレベルまで ${rank.next - progress.xp} XP` : '／ 最高ランク達成！'}</p></div></div>
       <div class="rank-progress large" role="progressbar" aria-label="次のレベルまで" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${rank.value}"><i style="width:${rank.value}%"></i></div>
-      <div class="passport-summary"><span>発見した電車 <b>${learned}/30</b></span><span>マスターした電車 <b>${mastered}/30</b></span><span>今日の3問 <b>${progress.daily.streak}日連続</b></span><span>バッジ <b>${progress.achievements.length}/${achievementCatalog.length}</b></span></div>
+      <div class="passport-summary"><span>発見した電車 <b>${learned}/${trains.length}</b></span><span>マスターした電車 <b>${mastered}/${trains.length}</b></span><span>今日の3問 <b>${progress.daily.streak}日連続</b></span><span>バッジ <b>${progress.achievements.length}/${achievementCatalog.length}</b></span></div>
     </section>
     <section class="stats-board">
       <div><small>PLAY COUNT</small><strong>${progress.plays}</strong><span>プレイ回数</span></div>
       <div><small>TOTAL ACCURACY</small><strong>${totalRate}<i>%</i></strong><span>${progress.totalCorrect} / ${progress.totalQuestions}問</span></div>
       <div><small>BEST STREAK</small><strong>${progress.maxStreak}</strong><span>最大連続正解</span></div>
-      <div><small>DISCOVERED</small><strong>${learned}<i>/30</i></strong><span>正解した電車</span></div>
-      <div><small>MASTERED</small><strong>${mastered}<i>/30</i></strong><span>習熟度3</span></div>
+      <div><small>DISCOVERED</small><strong>${learned}<i>/${trains.length}</i></strong><span>正解した電車</span></div>
+      <div><small>MASTERED</small><strong>${mastered}<i>/${trains.length}</i></strong><span>習熟度3</span></div>
     </section>
     <section class="course-records"><div class="section-heading"><div><p>COURSE RECORDS</p><h2>難易度別ベストスコア</h2></div><span>満点 1,000ポイント</span></div><div>${Object.entries(difficultyLabels).map(([key, item], index) => `<article style="--level-color:${item.color}"><span>0${index + 1}</span><div><small>${item.label}</small><strong>${progress.bestScores[key]}<i> pt</i></strong></div><progress max="1000" value="${progress.bestScores[key]}"></progress></article>`).join('')}</div></section>
     <section class="badge-section"><div class="section-heading"><div><p>ACHIEVEMENTS</p><h2>コレクションバッジ</h2></div><span>${progress.achievements.length} / ${achievementCatalog.length} 獲得</span></div><div class="badge-grid">${achievementCatalog.map((item) => { const earned = progress.achievements.includes(item.id); return `<article class="${earned ? 'is-earned' : 'is-locked'}"><span>${earned ? item.icon : '?'}</span><strong>${item.name}</strong><small>${item.note}</small></article>` }).join('')}</div></section>

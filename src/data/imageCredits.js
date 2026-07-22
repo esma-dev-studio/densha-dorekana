@@ -18,11 +18,11 @@ export const imageCredits = {
     "modified": true
   },
   "n700s": {
-    "author": "MaedaAkihiko",
-    "source": "Series-N700S-J2.jpg",
+    "author": "Mitsuki-2368",
+    "source": "JRC N700S series J1.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Series-N700S-J2.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JRC_N700S_series_J1.jpg",
     "localPath": "./images/n700s.webp",
     "modified": true
   },
@@ -72,11 +72,11 @@ export const imageCredits = {
     "modified": true
   },
   "odakyu-gse": {
-    "author": "Cassiopeia sweet",
-    "source": "ODAKYU ROMANCECAR 3000SE 70000GSE.JPG",
-    "license": "Public domain",
-    "licenseUrl": "",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ODAKYU_ROMANCECAR_3000SE_70000GSE.JPG",
+    "author": "MaedaAkihiko",
+    "source": "Odakyu-Series70000 GSE.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Odakyu-Series70000_GSE.jpg",
     "localPath": "./images/odakyu-gse.webp",
     "modified": true
   },
@@ -117,11 +117,11 @@ export const imageCredits = {
     "modified": true
   },
   "keikyu-n1000": {
-    "author": "E176",
-    "source": "Keikyu N1000 Series 1057 formation \"Yellow Happy Train\".jpg",
+    "author": "N509FZ",
+    "source": "Keikyu 1216-1209 leaving Shinagawa (20230803181147).jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keikyu_N1000_Series_1057_formation_%22Yellow_Happy_Train%22.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keikyu_1216-1209_leaving_Shinagawa_(20230803181147).jpg",
     "localPath": "./images/keikyu-n1000.webp",
     "modified": true
   },
@@ -153,11 +153,11 @@ export const imageCredits = {
     "modified": true
   },
   "kintetsu-hinotori": {
-    "author": "やまとたか",
-    "source": "Kintetsu 80000 series - Hinotori at Yamatotakada, Nara in 20221026.jpg",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kintetsu_80000_series_-_Hinotori_at_Yamatotakada,_Nara_in_20221026.jpg",
+    "author": "Masahiko OHKUBO",
+    "source": "Kintetsu 80000 series \"Hinotori\" 2022-04-02.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kintetsu_80000_series_%22Hinotori%22_2022-04-02.jpg",
     "localPath": "./images/kintetsu-hinotori.webp",
     "modified": true
   },
@@ -180,11 +180,11 @@ export const imageCredits = {
     "modified": true
   },
   "e233-chuo": {
-    "author": "Breakover",
-    "source": "JR East E233 Series, Chuo Rapid Train at Ochanomizu Station.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_East_E233_Series,_Chuo_Rapid_Train_at_Ochanomizu_Station.jpg",
+    "author": "KibaShinichi",
+    "source": "Chuo Line E233 series T27 Tokyo 20091218.jpg",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chuo_Line_E233_series_T27_Tokyo_20091218.jpg",
     "localPath": "./images/e233-chuo.webp",
     "modified": true
   },
@@ -207,20 +207,20 @@ export const imageCredits = {
     "modified": true
   },
   "jrwest-323": {
-    "author": "S5A-0043",
-    "source": "(JPN-Osaka) JR West 323 series LS20 @ Osaka 2024-11-19 - 2.jpg",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:(JPN-Osaka)_JR_West_323_series_LS20_@_Osaka_2024-11-19_-_2.jpg",
+    "author": "MaedaAkihiko",
+    "source": "323系電車(大阪城公園駅).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:323%E7%B3%BB%E9%9B%BB%E8%BB%8A(%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%85%AC%E5%9C%92%E9%A7%85).jpg",
     "localPath": "./images/jrwest-323.webp",
     "modified": true
   },
   "metro-17000": {
-    "author": "MaedaAkihiko",
-    "source": "Tokyo-Metro-Series17000 LED.jpg",
+    "author": "Wikimizuki",
+    "source": "Tokyo Metro 17000 17102F in Fujimino Station 01.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Metro-Series17000_LED.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_17000_17102F_in_Fujimino_Station_01.jpg",
     "localPath": "./images/metro-17000.webp",
     "modified": true
   },
@@ -267,6 +267,141 @@ export const imageCredits = {
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meitetsu_Express_9500_series.jpg",
     "localPath": "./images/meitetsu-9500.webp",
+    "modified": true
+  },
+  "e233-keihin": {
+    "author": "DAJF",
+    "source": "E233-1000 Kanda 20080422.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:E233-1000_Kanda_20080422.JPG",
+    "localPath": "./images/e233-keihin.webp",
+    "modified": true
+  },
+  "e233-yokohama": {
+    "author": "あかめっしゅ",
+    "source": "JR East E233-6000 Series H015 20191124.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_East_E233-6000_Series_H015_20191124.jpg",
+    "localPath": "./images/e233-yokohama.webp",
+    "modified": true
+  },
+  "e233-nambu": {
+    "author": "AQUSPhone This photo was taken with Canon Digital IXUS 50",
+    "source": "Nambu Line E233-8000 Series.JPG",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nambu_Line_E233-8000_Series.JPG",
+    "localPath": "./images/e233-nambu.webp",
+    "modified": true
+  },
+  "e235-yokosuka": {
+    "author": "Wikimizuki",
+    "source": "Series E235-1000 F-05 in Yokosuka Station 02.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Series_E235-1000_F-05_in_Yokosuka_Station_02.jpg",
+    "localPath": "./images/e235-yokosuka.webp",
+    "modified": true
+  },
+  "e131-sagami": {
+    "author": "MaedaAkihiko",
+    "source": "Series-E131-500 G07.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Series-E131-500_G07.jpg",
+    "localPath": "./images/e131-sagami.webp",
+    "modified": true
+  },
+  "tokyu-2020": {
+    "author": "DAJF",
+    "source": "Tokyu 2020 series set 2121 Jimmuji Station 20171128.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyu_2020_series_set_2121_Jimmuji_Station_20171128.jpg",
+    "localPath": "./images/tokyu-2020.webp",
+    "modified": true
+  },
+  "odakyu-5000": {
+    "author": "1096F1095F",
+    "source": "小田急5000形2代目.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%B0%8F%E7%94%B0%E6%80%A55000%E5%BD%A22%E4%BB%A3%E7%9B%AE.jpg",
+    "localPath": "./images/odakyu-5000.webp",
+    "modified": true
+  },
+  "keio-5000": {
+    "author": "Nyohoho",
+    "source": "Keio-n5000-wiki.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keio-n5000-wiki.jpg",
+    "localPath": "./images/keio-5000.webp",
+    "modified": true
+  },
+  "toei-5500": {
+    "author": "Cfktj1596",
+    "source": "Toei 5500 series Keisei Main Line 20190308.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toei_5500_series_Keisei_Main_Line_20190308.jpg",
+    "localPath": "./images/toei-5500.webp",
+    "modified": true
+  },
+  "toei-6500": {
+    "author": "MaedaAkihiko",
+    "source": "Toei Series6500-6502.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toei_Series6500-6502.jpg",
+    "localPath": "./images/toei-6500.webp",
+    "modified": true
+  },
+  "metro-1000": {
+    "author": "スカイライナー",
+    "source": "Tokyo Metro 1000.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_1000.jpg",
+    "localPath": "./images/metro-1000.webp",
+    "modified": true
+  },
+  "metro-2000": {
+    "author": "ソバ",
+    "source": "TokyoMetro 2000 Marunouchi-line.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TokyoMetro_2000_Marunouchi-line.jpg",
+    "localPath": "./images/metro-2000.webp",
+    "modified": true
+  },
+  "yokohama-4000": {
+    "author": "MaedaAkihiko",
+    "source": "Yokohama-Subway Series4000-4661.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama-Subway_Series4000-4661.jpg",
+    "localPath": "./images/yokohama-4000.webp",
+    "modified": true
+  },
+  "yokohama-10000": {
+    "author": "MaedaAkihiko",
+    "source": "Yokohama-City-Subway 10121.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yokohama-City-Subway_10121.jpg",
+    "localPath": "./images/yokohama-10000.webp",
+    "modified": true
+  },
+  "enoden-300": {
+    "author": "TKM3708",
+    "source": "Enoshima Electric Railway 300 Series 305.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Enoshima_Electric_Railway_300_Series_305.jpg",
+    "localPath": "./images/enoden-300.webp",
     "modified": true
   }
 }
