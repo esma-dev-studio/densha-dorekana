@@ -1,0 +1,19 @@
+{
+  "name": "電車どれかな？ 観察して学べる電車クイズ",
+  "short_name": "電車どれかな？",
+  "description": "実車写真から形式・愛称や走る路線を当てる、全30車種の子ども向け電車クイズ",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f5",
+  "theme_color": "#09283f",
+  "icons": [
+    {
+      "src": "./train-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

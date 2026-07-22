@@ -4,9 +4,12 @@ import { trains } from './data/trains.js'
 import {
   answerFor,
   buildQuestionSet,
+  dailyQuestionIds,
   generateOptions,
+  masteryLevel,
   pointsForHints,
   questionTypeFor,
+  rankForXp,
   resultTitle,
   selectReviewIds,
   validateTrainData,
@@ -67,9 +70,31 @@ describe('train quiz data and game logic', () => {
 
   it('applies the documented hint score and titles', () => {
     expect([0, 1, 2, 3].map(pointsForHints)).toEqual([100, 80, 60, 40])
-    expect([0, 4, 7, 9, 10].map(resultTitle)).toEqual(['電車たんけん隊', '駅員さん', '車掌さん', '運転士', '電車マスター'])
+    expect([0, 4, 7, 9, 10].map((count) => resultTitle(count))).toEqual(['電車たんけん隊', '駅員さん', '車掌さん', '運転士', '電車マスター'])
   })
 
+  it('builds a deterministic three-difficulty daily challenge', () => {
+    const first = dailyQuestionIds(trains, '2026-07-22')
+    const again = dailyQuestionIds(trains, '2026-07-22')
+    expect(first).toEqual(again)
+    expect(first).toHaveLength(3)
+    expect(new Set(first.map((id) => trains.find((train) => train.id === id).difficulty))).toEqual(new Set(['easy', 'normal', 'hard']))
+  })
+
+  it('keeps review sessions limited to the actual weak trains', () => {
+    const reviewIds = ['e5-hayabusa', 'e6-komachi']
+    const questions = buildQuestionSet(trains, 'review', { seed: 22, reviewIds, count: 10, exactReview: true })
+    expect(questions.map((question) => question.trainId).sort()).toEqual([...reviewIds].sort())
+  })
+
+  it('calculates mastery and XP ranks', () => {
+    expect(masteryLevel({ correct: 0, wrong: 2 })).toBe(0)
+    expect(masteryLevel({ correct: 1, wrong: 1 })).toBe(1)
+    expect(masteryLevel({ correct: 2, wrong: 1 })).toBe(2)
+    expect(masteryLevel({ correct: 4, wrong: 1 })).toBe(3)
+    expect(rankForXp(0).name).toBe('電車たんけん隊')
+    expect(rankForXp(1600).name).toBe('電車博士')
+  })
   it('prioritizes trains with repeated mistakes for review', () => {
     const progress = {
       trainStats: {

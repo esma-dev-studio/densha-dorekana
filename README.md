@@ -1,74 +1,50 @@
-# でんしゃ、どれかな？
+# 電車どれかな？
 
-写真を見て日本の鉄道車両を当てる、子ども向けの学習クイズWebアプリです。30車種・3段階の難易度を収録し、ヒント、復習、図鑑、成績保存までブラウザだけで動作します。
+実車写真を観察して、日本の電車の「形式・愛称」または「主に走る路線」を当てる、子ども向け学習クイズWebアプリです。
 
-## 主な機能
+## 100点版の主な機能
 
-- かんたん・ふつう・むずかしい各10車種、全30車種
-- 新幹線・特急は「形式＋愛称」、通勤電車・地下鉄は「主に走る路線」を出題
-- 1回10問、4択、段階ヒント、連続正解、難易度別スコア
-- 間違えた車両を優先する復習モード
-- 車種・地域・難易度・正解状況で絞り込める車両図鑑
-- 未正解車両をシルエットにする図鑑モード
-- 最高記録、正答率、連続正解、学習履歴をLocalStorageに保存
-- キーボード操作（1〜4）、効果音ON/OFF、画像拡大、レスポンシブ表示
-- 画像クレジット画面と、オフライン配信できるローカルWebP画像
+- 新幹線・特急・通勤電車・地下鉄の全30車種
+- 新幹線・特急は「形式＋愛称」、普通の電車は主な路線を出題
+- かんたん・ふつう・むずかしいの3コース（各10問）
+- 毎日内容が変わる「今日の3問」
+- 新幹線・特急・路線当てのテーマ別5問
+- 先頭・色・ライト・窓を順番に見る「観察ナビ」
+- 3段階ヒントとヒント数に応じた採点
+- 不正解時に、選んだ電車と正解を写真で比較
+- まちがえた電車と手動保存を組み合わせたスマート復習
+- 電車ごとの3段階習熟度、XP、6段階の称号、6種類のバッジ
+- 30車種の電車図鑑、名前・会社・路線検索、記録フィルター
+- 成績・途中セッションのブラウザ保存
+- キーボード操作、読み上げを考慮した代替テキスト、動きを減らす設定への対応
+- スマートフォン専用下部ナビゲーション
+- インストール・オフライン再訪に対応するPWA
 
-## 起動方法
+## 開発
 
-Node.js 20.19以上（または22.12以上）を使用してください。
+Node.js 20.19以上、または22.12以上を使用してください。
 
-```bash
-npm install
-npm run dev
-```
-
-表示されたローカルURLをブラウザで開きます。
+    npm install
+    npm run dev
 
 ## 品質チェック
 
-```bash
-npm test
-npm run build
-npm run preview
-```
+    npm test
+    npm run build
+    npm run preview
 
-テストでは車両数、難易度ごとの件数、出題重複、4択の一意性、採点、復習優先ロジックを検証します。
+テストでは、30車種のデータ整合性、画像ライセンス、4択の一意性、難易度別問題、毎日問題の再現性、復習対象の限定、習熟度・称号ロジックを確認します。
 
-## 車両を追加する
+## データと画像
 
-1. `src/data/trains.js` に既存項目と同じ形式で車両データを追加します。
-2. `scripts/image-manifest.json` に車両IDとWikimedia Commons検索語を追加します。
-3. `python -m pip install -r scripts/requirements.txt` で画像ツールを準備します。
-4. `python scripts/fetch_commons_images.py` を実行します。
-5. 図鑑と「画像クレジット」で写真・作者・ライセンスを目視確認します。
-6. `npm test` と `npm run build` を実行します。
-
-写真取得スクリプトはCC BY系（CC BY-SAを含む）、CC0、Public Domainのみを候補にし、WebPを`public/images`へ保存して、`src/data/imageCredits.js`を生成します。検索結果は自動選択なので、追加時には必ず車両が正しいか人の目で確認してください。
-
-## データと権利表記
-
-- 各写真の作者・原典・ライセンス・加工有無はアプリ内の「画像クレジット」に表示します。
-- 写真はWikimedia Commonsの各ファイルページに記載された条件に従います。
-- 車両の登場年・最高速度・路線は、鉄道事業者の公式ページを優先して確認しています。確認先は[FACT_SOURCES.md](./FACT_SOURCES.md)にまとめています。
-- 画像と車両情報は更新される可能性があるため、再利用・追加公開時にも原典を再確認してください。
-
-## 構成
-
-```text
-src/data/trains.js        車両・ヒント・解説データ
-src/data/imageCredits.js  画像権利情報（自動生成）
-src/logic.js              出題・選択肢・採点ロジック
-src/storage.js            LocalStorageと進行状況
-src/main.js               画面とイベント
-src/styles.css            UIとレスポンシブ設計
-scripts/                  画像取得・変換ツール
-```
+- 車両データ: src/data/trains.js
+- 画像クレジット: src/data/imageCredits.js
+- 事実確認元: FACT_SOURCES.md
+- 実車写真: Wikimedia Commonsから取得し、表示用WebPとしてローカル配信
+- 各画像の作者・出典・ライセンスはアプリ内の「画像クレジット」に表示
 
 ## GitHub Pages
 
-`main`ブランチへpushすると、`.github/workflows/deploy-pages.yml`がテストとビルドを行い、GitHub Pagesへ公開します。リポジトリの **Settings → Pages → Source** は **GitHub Actions** を選択してください。
+mainブランチへのpushで、.github/workflows/deploy-pages.ymlがテストとビルドを実行し、GitHub Pagesへ公開します。
 
-## 技術
-
-Vite / Vanilla JavaScript / CSS / Vitest。バックエンドやAPIキーは不要です。
+公開URL: https://esma-dev-studio.github.io/densha-dorekana/

@@ -31,6 +31,10 @@ export const shuffle = (items, random = Math.random) => {
 
 export const questionTypeFor = (train) => ['通勤電車', '地下鉄'].includes(train.category) ? 'line' : 'name'
 
+export const dateSeed = (dateKey) => String(dateKey).split('').reduce((seed, char) => (
+  ((seed * 31) + char.charCodeAt(0)) >>> 0
+), 7)
+
 const candidateScore = (correct, candidate, difficulty) => {
   if (difficulty === 'easy') {
     return (correct.category !== candidate.category ? 6 : 0)
@@ -67,15 +71,21 @@ export const generateOptions = (correct, type, allTrains, random = Math.random) 
 }
 
 export const buildQuestionSet = (allTrains, difficulty, options = {}) => {
-  const { count = 10, seed = Date.now(), reviewIds = [] } = options
+  const { count = 10, seed = Date.now(), reviewIds = [], trainIds = [], exactReview = false } = options
   const random = seededRandom(seed)
-  const difficultyPool = allTrains.filter((train) => train.difficulty === difficulty)
+  const selectedPool = trainIds.length
+    ? trainIds.map((id) => allTrains.find((train) => train.id === id)).filter(Boolean)
+    : allTrains.filter((train) => train.difficulty === difficulty)
   const reviewPool = reviewIds.map((id) => allTrains.find((train) => train.id === id)).filter(Boolean)
   const source = reviewIds.length
-    ? [...reviewPool, ...shuffle(allTrains.filter((train) => !reviewIds.includes(train.id)), random)]
-    : shuffle(difficultyPool, random)
-  const unique = Array.from(new Map(source.map((train) => [train.id, train])).values()).slice(0, count)
-  if (unique.length < count) throw new Error(`${difficulty}の問題が${count}件必要です`)
+    ? exactReview
+      ? shuffle(reviewPool, random)
+      : [...shuffle(reviewPool, random), ...shuffle(allTrains.filter((train) => !reviewIds.includes(train.id)), random)]
+    : shuffle(selectedPool, random)
+  const available = Array.from(new Map(source.map((train) => [train.id, train])).values())
+  const targetCount = exactReview ? Math.min(count, available.length) : count
+  const unique = available.slice(0, targetCount)
+  if (!unique.length || (!exactReview && unique.length < count)) throw new Error(`${difficulty}の問題が${count}件必要です`)
   return unique.map((train) => {
     const type = questionTypeFor(train)
     return {
@@ -84,6 +94,14 @@ export const buildQuestionSet = (allTrains, difficulty, options = {}) => {
       options: generateOptions(train, type, allTrains, random),
     }
   })
+}
+
+export const dailyQuestionIds = (allTrains, dateKey) => {
+  const random = seededRandom(dateSeed(dateKey))
+  return shuffle(['easy', 'normal', 'hard'].map((difficulty) => {
+    const pool = shuffle(allTrains.filter((train) => train.difficulty === difficulty), random)
+    return pool[0]?.id
+  }).filter(Boolean), random)
 }
 
 export const pointsForHints = (hintCount) => [100, 80, 60, 40][Math.min(3, Math.max(0, hintCount))]
@@ -101,23 +119,49 @@ export const selectReviewIds = (progress, allTrains, limit = 10) => {
     .map((item) => item.id)
 }
 
-export const resultTitle = (correctCount) => {
-  if (correctCount === 10) return '電車マスター'
-  if (correctCount === 9) return '運転士'
-  if (correctCount >= 7) return '車掌さん'
-  if (correctCount >= 4) return '駅員さん'
+export const resultTitle = (correctCount, totalCount = 10) => {
+  const rate = totalCount ? correctCount / totalCount : 0
+  if (rate === 1) return '電車マスター'
+  if (rate >= 0.9) return '運転士'
+  if (rate >= 0.7) return '車掌さん'
+  if (rate >= 0.4) return '駅員さん'
   return '電車たんけん隊'
+}
+
+export const masteryLevel = (stats = {}) => {
+  const correct = stats.correct ?? 0
+  const wrong = stats.wrong ?? 0
+  const attempts = correct + wrong
+  const rate = attempts ? correct / attempts : 0
+  if (correct >= 4 && rate >= 0.75) return 3
+  if (correct >= 2 && rate >= 0.6) return 2
+  if (correct >= 1) return 1
+  return 0
+}
+
+export const rankForXp = (xp = 0) => {
+  const ranks = [
+    { level: 1, name: '電車たんけん隊', min: 0, next: 120 },
+    { level: 2, name: 'ホーム係', min: 120, next: 300 },
+    { level: 3, name: '駅員さん', min: 300, next: 600 },
+    { level: 4, name: '車掌さん', min: 600, next: 1000 },
+    { level: 5, name: '運転士', min: 1000, next: 1600 },
+    { level: 6, name: '電車博士', min: 1600, next: null },
+  ]
+  return [...ranks].reverse().find((rank) => xp >= rank.min) ?? ranks[0]
 }
 
 export const sessionSummary = (session) => {
   const correct = session.answers.filter((answer) => answer.correct).length
   const totalSeconds = session.answers.reduce((sum, answer) => sum + answer.answerSeconds, 0)
+  const total = session.answers.length
   return {
     correct,
-    rate: session.answers.length ? Math.round((correct / session.answers.length) * 100) : 0,
-    averageSeconds: session.answers.length ? totalSeconds / session.answers.length : 0,
+    total,
+    rate: total ? Math.round((correct / total) * 100) : 0,
+    averageSeconds: total ? totalSeconds / total : 0,
     wrongIds: session.answers.filter((answer) => !answer.correct).map((answer) => answer.trainId),
-    title: resultTitle(correct),
+    title: resultTitle(correct, total),
   }
 }
 
