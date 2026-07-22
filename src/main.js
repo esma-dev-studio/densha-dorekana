@@ -1,4 +1,5 @@
 import './styles.css'
+import './design-v3.css'
 import { difficultyLabels, trainById, trains } from './data/trains.js'
 import {
   QUESTION_LABELS,
@@ -98,13 +99,12 @@ const header = () => {
   <header class="site-header">
     <button class="brand" data-view="home" aria-label="電車どれかな？ ホーム">
       <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
-      <span><strong>電車どれかな？</strong><small>DENSHA OBSERVATION QUIZ</small></span>
+      <span><strong>電車どれかな？</strong><small>でんしゃ発見クイズ</small></span>
     </button>
     <nav aria-label="メインメニュー">
-      <button data-view="home" ${['home', 'quiz', 'result'].includes(view) ? 'aria-current="page"' : ''}>クイズ</button>
-      <button data-view="collection" ${view === 'collection' ? 'aria-current="page"' : ''}>電車図鑑</button>
-      <button data-view="stats" ${view === 'stats' ? 'aria-current="page"' : ''}>成績</button>
-      <button data-view="credits" ${view === 'credits' ? 'aria-current="page"' : ''}>画像クレジット</button>
+      <button data-view="home" ${['home', 'quiz', 'result'].includes(view) ? 'aria-current="page"' : ''}>あそぶ</button>
+      <button data-view="collection" ${view === 'collection' ? 'aria-current="page"' : ''}>電車ずかん</button>
+      <button data-view="stats" ${view === 'stats' ? 'aria-current="page"' : ''}>パスポート</button>
     </nav>
     <div class="header-tools">
       <button class="rank-chip" data-view="stats" aria-label="レベル${rank.level} ${rank.name}、${progress.xp} XP"><small>LV.${rank.level}</small><strong>${rank.name}</strong><span>${progress.xp} XP</span></button>
@@ -123,9 +123,9 @@ const footer = () => `
 
 const mobileNav = () => `
   <nav class="mobile-nav" aria-label="スマートフォンメニュー">
-    <button data-view="home" ${['home', 'quiz', 'result'].includes(view) ? 'aria-current="page"' : ''}><span aria-hidden="true">▶</span>クイズ</button>
-    <button data-view="collection" ${view === 'collection' ? 'aria-current="page"' : ''}><span aria-hidden="true">▦</span>図鑑</button>
-    <button data-view="stats" ${view === 'stats' ? 'aria-current="page"' : ''}><span aria-hidden="true">★</span>成績</button>
+    <button data-view="home" ${['home', 'quiz', 'result'].includes(view) ? 'aria-current="page"' : ''}><span aria-hidden="true">▶</span>あそぶ</button>
+    <button data-view="collection" ${view === 'collection' ? 'aria-current="page"' : ''}><span aria-hidden="true">▦</span>ずかん</button>
+    <button data-view="stats" ${view === 'stats' ? 'aria-current="page"' : ''}><span aria-hidden="true">★</span>パスポート</button>
   </nav>`
 
 const shell = (content, pageClass = '') => {
@@ -158,15 +158,16 @@ const renderHome = () => {
   shell(`
     <section class="home-hero">
       <div class="hero-copy">
-        <p class="route-label"><span>観察</span><b>▶</b><span>発見</span><b>▶</b><span>電車博士</span></p>
-        <h1>写真をよく見て、<br><em>電車のちがい</em>を発見しよう。</h1>
-        <p>色・ライト・窓・先頭の形。正式な形式・愛称と走る路線まで分かる、全30車種の電車クイズです。</p>
-        <button class="primary-action" data-start="easy">かんたんから出発 <span>→</span></button>
+        <p class="hero-kicker"><span aria-hidden="true">●</span> 30しゅるいの電車に会える！</p>
+        <h1>どの電車か、<br><em>わかるかな？</em></h1>
+        <p>写真の「色・かたち・ライト」をよく見て、電車の名前や走る路線を当てよう。遊ぶほど、電車博士に近づくよ。</p>
+        <button class="primary-action hero-action" data-start="easy"><span class="action-icon" aria-hidden="true">▶</span><span class="action-copy"><small>まずは かんたん10問</small><strong>電車クイズに出発！</strong></span><span class="action-arrow" aria-hidden="true">→</span></button>
+        <div class="hero-facts" aria-label="アプリの特長"><span><b>30</b>種類</span><span><b>3</b>レベル</span><span><b>2</b>分から</span></div>
       </div>
       <div class="hero-photo">
         ${trainImage(heroTrain, '', true)}
-        <div class="departure-board"><small>NEXT DEPARTURE</small><strong>電車クイズ　10問</strong><span>まもなく発車します</span></div>
-        <button class="photo-credit-link" data-view="credits">写真のクレジットを見る</button>
+        <div class="departure-board"><small>今日のおすすめ</small><strong>かんたんクイズ</strong><span>全10問・約5分</span></div>
+        <button class="photo-credit-link" data-view="credits">写真について</button>
       </div>
     </section>
 
@@ -190,7 +191,7 @@ const renderHome = () => {
     </section>
 
     <section class="level-section" aria-labelledby="level-title">
-      <div class="section-heading"><div><p>CHOOSE YOUR COURSE</p><h2 id="level-title">難易度をえらぶ</h2></div><span>各コース10問・同じ問題は出ません</span></div>
+      <div class="section-heading"><div><p>3つの路線からえらぼう</p><h2 id="level-title">どのコースに乗る？</h2></div><span>各コース10問・同じ問題は出ません</span></div>
       <div class="quiz-format-guide" aria-label="出題ルール">
         <span>出題ルール</span>
         <p><strong>新幹線・特急</strong><small>E5系 はやぶさ、小田急50000形 VSEなど</small>形式＋愛称を当てる</p>
@@ -200,7 +201,7 @@ const renderHome = () => {
     </section>
 
     <section class="theme-section" aria-labelledby="theme-title">
-      <div class="section-heading"><div><p>PICK A FAVORITE</p><h2 id="theme-title">好きなテーマで5問</h2></div><span>短いコースで得意を増やそう</span></div>
+      <div class="section-heading"><div><p>好きからはじめるミニクイズ</p><h2 id="theme-title">テーマで遊ぶ</h2></div><span>5問だけのショートコース</span></div>
       <div class="theme-grid">${Object.entries(themeCourses).map(([key, course]) => `
         <button class="theme-card" data-theme="${key}">
           <span aria-hidden="true">${course.icon}</span><div><strong>${course.label}</strong><small>${course.note}</small></div><b>5問 →</b>
@@ -209,7 +210,7 @@ const renderHome = () => {
 
     <section class="home-grid">
       <article class="review-panel">
-        <p class="panel-kicker">REVIEW LINE</p><h2>まちがえた電車を優先して復習</h2>
+        <p class="panel-kicker">もう一度見れば、きっと分かる</p><h2>まちがえた電車に<br>リベンジしよう！</h2>
         <p>${reviewIds.length ? `${reviewIds.length}種類の苦手な電車があります。間違いの多い順に出題します。` : 'クイズで間違えた電車が、ここに自動で集まります。'}</p>
         <button id="start-review" ${reviewIds.length ? '' : 'disabled'}>復習モードを始める <span>${reviewIds.length}両</span></button>
       </article>
@@ -220,7 +221,7 @@ const renderHome = () => {
         <button data-view="stats">くわしい成績を見る →</button>
       </article>
       <article class="library-teaser">
-        <div><p class="panel-kicker">TRAIN LIBRARY</p><h2>30種類の電車図鑑</h2><p>新幹線から地方私鉄まで、見分け方と豆知識を収録。</p><button data-view="collection">図鑑をひらく →</button></div>
+        <div><p class="panel-kicker">見つけた電車をコレクション</p><h2>30種類の電車ずかん</h2><p>新幹線から地方私鉄まで、見分け方と豆知識を収録。</p><button data-view="collection">ずかんを見にいく →</button></div>
         <div class="mini-line-map" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
       </article>
     </section>
