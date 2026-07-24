@@ -200,5 +200,89 @@
         "id":  "enoden-300",
         "query":  "Enoden 300 series train",
         "fileTitle":  "File:Enoshima Electric Railway 300 Series 305.jpg"
+    },
+    {
+        "id":  "e233-tokaido",
+        "query":  "JR East E233-3000 Tokaido Line train"
+    },
+    {
+        "id":  "e233-keiyo",
+        "query":  "JR East E233-5000 Keiyo Line train"
+    },
+    {
+        "id":  "e231-musashino",
+        "query":  "JR East E231 Musashino Line train"
+    },
+    {
+        "id":  "e233-joban-local",
+        "query":  "JR East E233-2000 Joban Local Line train"
+    },
+    {
+        "id":  "e233-saikyo",
+        "query":  "JR East E233-7000 Saikyo Line train"
+    },
+    {
+        "id":  "e131-tsurumi",
+        "query":  "JR East E131-1000 Tsurumi Line train"
+    },
+    {
+        "id":  "e231-hachiko",
+        "query":  "JR East E231-3000 Hachiko Line train"
+    },
+    {
+        "id":  "metro-13000",
+        "query":  "Tokyo Metro 13000 Hibiya Line train",
+        "fileTitle":  "File:Tokyo-Metro-Series13000.jpg"
+    },
+    {
+        "id":  "metro-15000",
+        "query":  "Tokyo Metro 15000 Tozai Line train"
+    },
+    {
+        "id":  "metro-16000",
+        "query":  "Tokyo Metro 16000 Chiyoda Line train"
+    },
+    {
+        "id":  "metro-9000",
+        "query":  "Tokyo Metro 9000 Namboku Line train"
+    },
+    {
+        "id":  "toei-10300",
+        "query":  "Toei 10-300 Shinjuku Line train"
+    },
+    {
+        "id":  "toei-12600",
+        "query":  "Toei 12-600 Oedo Line train",
+        "fileTitle":  "File:Toei12600.jpg"
+    },
+    {
+        "id":  "keio-1000",
+        "query":  "Keio 1000 Inokashira Line train",
+        "fileTitle":  "File:Keio Series1000-1778.jpg"
+    },
+    {
+        "id":  "tokyu-6020",
+        "query":  "Tokyu 6020 Oimachi Line train"
+    },
+    {
+        "id":  "tokyu-7000",
+        "query":  "Tokyu 7000 Ikegami Line train"
+    },
+    {
+        "id":  "tobu-50000",
+        "query":  "Tobu 50000 Tojo Line train"
+    },
+    {
+        "id":  "tokyo-monorail-10000",
+        "query":  "Tokyo Monorail 10000 series train"
+    },
+    {
+        "id":  "rinkai-70000",
+        "query":  "Tokyo Waterfront 70-000 Rinkai Line train"
+    },
+    {
+        "id":  "shonan-5000",
+        "query":  "Shonan Monorail 5000 series train",
+        "fileTitle":  "File:Shonan-Monorail Series5000-5608.jpg"
     }
 ]

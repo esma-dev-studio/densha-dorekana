@@ -45,3 +45,20 @@
 - [Wikimedia Commons: Reusing content outside Wikimedia](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia/en)
 
 最高速度は設計最高速度ではなく、公式ページで営業最高速度が示されている場合は営業値を採用しています。運行区間や所属は将来変わる可能性があります。
+
+## 65車種版で追加確認した公式情報
+
+- [JR東日本 E233系（運行線区）](https://www.jreast.co.jp/en/train/local/e233.html)
+- [JR東日本 在来線車両図鑑](https://www.jreast.co.jp/railway/train/)
+- [JR東日本 鶴見線E131系1000代（PDF）](https://www.jreast.co.jp/press/2023/yokohama/20231101_y01.pdf)
+- [東京メトロ 路線・輸送状況](https://www.tokyometro.jp/corporate/enterprise/passenger_rail/transportation/lines/index.html)
+- [東京メトロ 車両保有数](https://www.tokyometro.jp/corporate/enterprise/passenger_rail/cars/counting/index.html)
+- [都営地下鉄 事業概要・車両形式](https://www.kotsu.metro.tokyo.jp/about/service/subway.html)
+- [都営地下鉄 車両形式図](https://www.kotsu.metro.tokyo.jp/about/koukai/vehicle_outline/model_diagram/)
+- [東急 大井町線](https://www.tokyu.co.jp/railway/om/)
+- [東急 6020系](https://www.tokyu.co.jp/company/information/detail/58201.html)
+- [京王 現役車両図鑑](https://www.keio.co.jp/keiofan/museum/exist/)
+- [東武鉄道 車両紹介](https://www.tobu.co.jp/corporation/rail/vehicles/)
+- [東京モノレール 車両紹介](https://www.tokyo-monorail.co.jp/fun/feature.html)
+- [りんかい線 車両紹介](https://www.twr.co.jp/route/tabid/144/Default.aspx)
+- [湘南モノレール 5000系](https://www.shonan-monorail.co.jp/fun/monorail5000.html)

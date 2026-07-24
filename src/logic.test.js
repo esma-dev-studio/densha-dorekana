@@ -16,8 +16,8 @@ import {
 } from './logic.js'
 
 describe('train quiz data and game logic', () => {
-  it('contains 45 valid trains with at least ten per difficulty', () => {
-    expect(trains).toHaveLength(45)
+  it('contains 65 valid trains with at least ten per difficulty', () => {
+    expect(trains).toHaveLength(65)
     expect(validateTrainData(trains)).toEqual([])
     for (const difficulty of ['easy', 'normal', 'hard']) {
       expect(trains.filter((train) => train.difficulty === difficulty).length).toBeGreaterThanOrEqual(10)

@@ -403,5 +403,185 @@ export const imageCredits = {
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Enoshima_Electric_Railway_300_Series_305.jpg",
     "localPath": "./images/enoden-300.webp",
     "modified": true
+  },
+  "e233-tokaido": {
+    "author": "Toshinori baba",
+    "source": "E233-3000 tokaido main line.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:E233-3000_tokaido_main_line.JPG",
+    "localPath": "./images/e233-tokaido.webp",
+    "modified": true
+  },
+  "e233-keiyo": {
+    "author": "Maru8",
+    "source": "JR East E233-5000 Keiyo Line.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_East_E233-5000_Keiyo_Line.JPG",
+    "localPath": "./images/e233-keiyo.webp",
+    "modified": true
+  },
+  "e231-musashino": {
+    "author": "Cfktj1596 This photo was taken with Nikon D750",
+    "source": "JR East e231 series Musashino Line 20171127.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_East_e231_series_Musashino_Line_20171127.jpg",
+    "localPath": "./images/e231-musashino.webp",
+    "modified": true
+  },
+  "e233-joban-local": {
+    "author": "Toshinori baba",
+    "source": "Joban kanko line E233-2000.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joban_kanko_line_E233-2000.jpg",
+    "localPath": "./images/e233-joban-local.webp",
+    "modified": true
+  },
+  "e233-saikyo": {
+    "author": "Hyper Maniac Man",
+    "source": "JR East E233-7000 Series Saikyō Line at Ikebukuro Station.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_East_E233-7000_Series_Saiky%C5%8D_Line_at_Ikebukuro_Station.jpg",
+    "localPath": "./images/e233-saikyo.webp",
+    "modified": true
+  },
+  "e131-tsurumi": {
+    "author": "LERK",
+    "source": "JREast-E131-1000-T1-20240203-154959.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JREast-E131-1000-T1-20240203-154959.jpg",
+    "localPath": "./images/e131-tsurumi.webp",
+    "modified": true
+  },
+  "e231-hachiko": {
+    "author": "非匿名利用者634 (Hitokumei Riyosha 634)",
+    "source": "East Japan Railway Series E231-3000 Hachiko Kawagoe.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:East_Japan_Railway_Series_E231-3000_Hachiko_Kawagoe.jpg",
+    "localPath": "./images/e231-hachiko.webp",
+    "modified": true
+  },
+  "metro-13000": {
+    "author": "MaedaAkihiko",
+    "source": "Tokyo-Metro-Series13000.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Metro-Series13000.jpg",
+    "localPath": "./images/metro-13000.webp",
+    "modified": true
+  },
+  "metro-15000": {
+    "author": "ja:user:Resident of higashi-fuchu",
+    "source": "Tokyo Metro Tozai 15102 Minami-Gyotoku 20101015.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_Tozai_15102_Minami-Gyotoku_20101015.jpg",
+    "localPath": "./images/metro-15000.webp",
+    "modified": true
+  },
+  "metro-16000": {
+    "author": "星空の川に (Hoshizora no kawa ni)",
+    "source": "Tokyo Metro 16000 16117 20151013.jpg",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_16000_16117_20151013.jpg",
+    "localPath": "./images/metro-16000.webp",
+    "modified": true
+  },
+  "metro-9000": {
+    "author": "星空の川に (Hoshizora no kawa ni)",
+    "source": "Tokyo Metro 9000 series 9103 20170422.jpg",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_9000_series_9103_20170422.jpg",
+    "localPath": "./images/metro-9000.webp",
+    "modified": true
+  },
+  "toei-10300": {
+    "author": "Nohoho This photo was taken with Sharp V601SH",
+    "source": "Toei-Shinjuku-line Type10-300.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toei-Shinjuku-line_Type10-300.jpg",
+    "localPath": "./images/toei-10300.webp",
+    "modified": true
+  },
+  "toei-12600": {
+    "author": "Nyohoho",
+    "source": "Toei12600.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toei12600.jpg",
+    "localPath": "./images/toei-12600.webp",
+    "modified": true
+  },
+  "keio-1000": {
+    "author": "MaedaAkihiko",
+    "source": "Keio Series1000-1778.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Keio_Series1000-1778.jpg",
+    "localPath": "./images/keio-1000.webp",
+    "modified": true
+  },
+  "tokyu-6020": {
+    "author": "Cfktj1596",
+    "source": "Tokyu 6020 series Ōimachi Line 20181228.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyu_6020_series_%C5%8Cimachi_Line_20181228.jpg",
+    "localPath": "./images/tokyu-6020.webp",
+    "modified": true
+  },
+  "tokyu-7000": {
+    "author": "MaedaAkihiko This photo was taken with Panasonic Lumix DMC-FZ300",
+    "source": "Tokyu-Ikegami-Line-Series7000.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyu-Ikegami-Line-Series7000.jpg",
+    "localPath": "./images/tokyu-7000.webp",
+    "modified": true
+  },
+  "tobu-50000": {
+    "author": "MaedaAkihiko",
+    "source": "Tobu-Tojo-Line-Series51001F.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tobu-Tojo-Line-Series51001F.jpg",
+    "localPath": "./images/tobu-50000.webp",
+    "modified": true
+  },
+  "tokyo-monorail-10000": {
+    "author": "DAJF",
+    "source": "Tokyo Monorail 10000 series set 10011 Showajima 20140308.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Monorail_10000_series_set_10011_Showajima_20140308.JPG",
+    "localPath": "./images/tokyo-monorail-10000.webp",
+    "modified": true
+  },
+  "rinkai-70000": {
+    "author": "MaedaAkihiko",
+    "source": "Rinkai-line Series70-000 70-030.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rinkai-line_Series70-000_70-030.jpg",
+    "localPath": "./images/rinkai-70000.webp",
+    "modified": true
+  },
+  "shonan-5000": {
+    "author": "MaedaAkihiko",
+    "source": "Shonan-Monorail Series5000-5608.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shonan-Monorail_Series5000-5608.jpg",
+    "localPath": "./images/shonan-5000.webp",
+    "modified": true
   }
 }
