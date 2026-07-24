@@ -1,0 +1,42 @@
+ruby {
+  ruby-align: center;
+  ruby-position: over;
+  text-decoration: none;
+}
+
+ruby rt {
+  color: currentColor;
+  font-size: 0.52em;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  opacity: 0.82;
+  text-transform: none;
+}
+
+.answer-choice strong,
+.question-column h1,
+.learning-card strong,
+.card-body h2 {
+  line-height: 1.75;
+}
+
+.answer-choice strong ruby rt {
+  font-size: 0.58em;
+}
+
+.page-intro h1 ruby rt,
+.hero-copy h1 ruby rt,
+.result-hero h1 ruby rt {
+  font-size: 0.45em;
+}
+
+@media (max-width: 640px) {
+  ruby rt {
+    font-size: 0.55em;
+  }
+
+  .answer-choice {
+    min-height: 72px;
+  }
+}

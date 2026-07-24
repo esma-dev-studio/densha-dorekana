@@ -1,5 +1,6 @@
 import './styles.css'
 import './design-v3.css'
+import './furigana.css'
 import { difficultyLabels, trainById, trains } from './data/trains.js'
 import {
   QUESTION_LABELS,
@@ -23,9 +24,11 @@ import {
   saveSession,
 } from './storage.js'
 import { playSound } from './audio.js'
+import { applyFurigana, createFuriganaEntries } from './furigana.js'
 
 const app = document.querySelector('#app')
 const dataErrors = validateTrainData(trains)
+const furiganaEntries = createFuriganaEntries(trains)
 let progress = loadProgress()
 let session = null
 let completedSession = null
@@ -131,6 +134,7 @@ const mobileNav = () => `
 const shell = (content, pageClass = '') => {
   app.innerHTML = `<a class="skip-link" href="#main-content">本文へ移動</a>${header()}<main id="main-content" class="${pageClass}" tabindex="-1">${content}</main>${footer()}${mobileNav()}
     <dialog id="image-dialog" class="image-dialog"><button class="dialog-close" aria-label="拡大画像を閉じる">×</button><div id="dialog-image"></div></dialog>`
+  applyFurigana(app, furiganaEntries)
   bindGlobalEvents()
   bindImageFallbacks()
 }
