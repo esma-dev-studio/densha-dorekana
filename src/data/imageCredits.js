@@ -583,5 +583,230 @@ export const imageCredits = {
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shonan-Monorail_Series5000-5608.jpg",
     "localPath": "./images/shonan-5000.webp",
     "modified": true
+  },
+  "osaka-400": {
+    "author": "Samson Ng . D201@EAL",
+    "source": "400 Series EMU.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:400_Series_EMU.jpg",
+    "localPath": "./images/osaka-400.webp",
+    "modified": true
+  },
+  "osaka-30000": {
+    "author": "S5A-0043",
+    "source": "(JPN-Osaka) Midosuji Line 30000 series 31617F @ Shin-Osaka 2024-11-17.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:(JPN-Osaka)_Midosuji_Line_30000_series_31617F_@_Shin-Osaka_2024-11-17.jpg",
+    "localPath": "./images/osaka-30000.webp",
+    "modified": true
+  },
+  "osaka-66": {
+    "author": "さりと",
+    "source": "Osaka Metro 66 Series 66602F at Nippombashi.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Metro_66_Series_66602F_at_Nippombashi.jpg",
+    "localPath": "./images/osaka-66.webp",
+    "modified": true
+  },
+  "osaka-80": {
+    "author": "Masayuki (Yuki) Kawagishi from Tokyo, Japan",
+    "source": "Osaka subway Imazatosuji line.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_subway_Imazatosuji_line.jpg",
+    "localPath": "./images/osaka-80.webp",
+    "modified": true
+  },
+  "osaka-newtram-200": {
+    "author": "さりと",
+    "source": "Osaka Metro 200 Series 201-08F.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Metro_200_Series_201-08F.jpg",
+    "localPath": "./images/osaka-newtram-200.webp",
+    "modified": true
+  },
+  "kyoto-20": {
+    "author": "Hahifuheho",
+    "source": "Kyoto subway 20 series unit 31 20220506 Takeda.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyoto_subway_20_series_unit_31_20220506_Takeda.jpg",
+    "localPath": "./images/kyoto-20.webp",
+    "modified": true
+  },
+  "kobe-6000": {
+    "author": "Jr223~commonswiki",
+    "source": "Kobe city subway 6000 series.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kobe_city_subway_6000_series.jpg",
+    "localPath": "./images/kobe-6000.webp",
+    "modified": true
+  },
+  "nagoya-n1000": {
+    "author": "LERK",
+    "source": "Nagoya-Municipal-Subway-N1002-20100317.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagoya-Municipal-Subway-N1002-20100317.jpg",
+    "localPath": "./images/nagoya-n1000.webp",
+    "modified": true
+  },
+  "fukuoka-4000": {
+    "author": "ChenSimon",
+    "source": "Fukuoka City Subway Series 4000 at Meinohama Station (20241027 Opening Day).jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fukuoka_City_Subway_Series_4000_at_Meinohama_Station_(20241027_Opening_Day).jpg",
+    "localPath": "./images/fukuoka-4000.webp",
+    "modified": true
+  },
+  "sendai-3000": {
+    "author": "YAMANOTELINE e231",
+    "source": "Sendai Subway Series3000.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sendai_Subway_Series3000.jpg",
+    "localPath": "./images/sendai-3000.webp",
+    "modified": true
+  },
+  "sapporo-9000": {
+    "author": "bellz_asamidou",
+    "source": "Sapporo 9000 9001 Odori 20150521.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sapporo_9000_9001_Odori_20150521.jpg",
+    "localPath": "./images/sapporo-9000.webp",
+    "modified": true
+  },
+  "jrwest-223-2000": {
+    "author": "SNK5578",
+    "source": "JRW Series 223-2000 set W26 passing through Motomachi station.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JRW_Series_223-2000_set_W26_passing_through_Motomachi_station.jpg",
+    "localPath": "./images/jrwest-223-2000.webp",
+    "modified": true
+  },
+  "jrwest-321": {
+    "author": "TRR2000",
+    "source": "JR-West-321-Series-D10-20180218.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR-West-321-Series-D10-20180218.jpg",
+    "localPath": "./images/jrwest-321.webp",
+    "modified": true
+  },
+  "jrwest-227-1000": {
+    "author": "MaedaAkihiko",
+    "source": "RW-Series227-1000 SR02.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:RW-Series227-1000_SR02.jpg",
+    "localPath": "./images/jrwest-227-1000.webp",
+    "modified": true
+  },
+  "jrwest-227-500": {
+    "author": "T. Hanami",
+    "source": "JR West 227 Series \"Urara\" R6 set.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_West_227_Series_%22Urara%22_R6_set.jpg",
+    "localPath": "./images/jrwest-227-500.webp",
+    "modified": true
+  },
+  "jrwest-227-0": {
+    "author": "Rsa",
+    "source": "JR West 227 A06 RedWing.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_West_227_A06_RedWing.jpg",
+    "localPath": "./images/jrwest-227-0.webp",
+    "modified": true
+  },
+  "jrkyushu-821": {
+    "author": "こはるん",
+    "source": "JR Kyushu 821 Series & 811 Series.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_Kyushu_821_Series_%26_811_Series.jpg",
+    "localPath": "./images/jrkyushu-821.webp",
+    "modified": true
+  },
+  "jrh-737": {
+    "author": "Mt.Asahidake",
+    "source": "JR Hokkaido EC 737 at Higashi-Muroran Station.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JR_Hokkaido_EC_737_at_Higashi-Muroran_Station.jpg",
+    "localPath": "./images/jrh-737.webp",
+    "modified": true
+  },
+  "osaka-monorail-3000": {
+    "author": "もんじゃ",
+    "source": "Osaka Monorail 3000 series.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Monorail_3000_series.jpg",
+    "localPath": "./images/osaka-monorail-3000.webp",
+    "modified": true
+  },
+  "chiba-monorail-0": {
+    "author": "掬茶",
+    "source": "Chiba Urban Monorail 0 series 20120809.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiba_Urban_Monorail_0_series_20120809.jpg",
+    "localPath": "./images/chiba-monorail-0.webp",
+    "modified": true
+  },
+  "yuirail-1000": {
+    "author": "MaedaAkihiko",
+    "source": "Okinawa-Monorail Series1000-1207.jpg",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Okinawa-Monorail_Series1000-1207.jpg",
+    "localPath": "./images/yuirail-1000.webp",
+    "modified": true
+  },
+  "kitakyushu-1000": {
+    "author": "ムシキング探検隊",
+    "source": "Kitakyushu Monorail 1000 series 1101F.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitakyushu_Monorail_1000_series_1101F.jpg",
+    "localPath": "./images/kitakyushu-1000.webp",
+    "modified": true
+  },
+  "portliner-2000": {
+    "author": "Mihimaru Vista",
+    "source": "KNT2000 the first exterior.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:KNT2000_the_first_exterior.jpg",
+    "localPath": "./images/portliner-2000.webp",
+    "modified": true
+  },
+  "astram-7000": {
+    "author": "S.Raika at Japanese Wikipedia This photo was taken with Sony FDR-AX40",
+    "source": "HRT70-31.JPG",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:HRT70-31.JPG",
+    "localPath": "./images/astram-7000.webp",
+    "modified": true
+  },
+  "linimo-100": {
+    "author": "nobu3withfoxy from Iga,Mie, Japan",
+    "source": "Linimo (標準塗装 Normal) (17690006753).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Linimo_(%E6%A8%99%E6%BA%96%E5%A1%97%E8%A3%85_Normal)_(17690006753).jpg",
+    "localPath": "./images/linimo-100.webp",
+    "modified": true
   }
 }

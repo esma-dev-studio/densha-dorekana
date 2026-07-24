@@ -27,7 +27,7 @@ SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 ALLOWED_LICENSE_MARKERS = ("cc by", "cc0", "public domain", "pdm")
 PENALTY_WORDS = (
     "interior", "seat", "logo", "map", "diagram", "drawing", "model",
-    "cab", "plate", "destination", "headmark", "display", "museum",
+    "cab", "inside", "gangway", "priority", "plate", "destination", "headmark", "display", "museum",
 )
 
 

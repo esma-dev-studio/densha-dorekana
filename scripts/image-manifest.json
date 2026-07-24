@@ -284,5 +284,115 @@
         "id":  "shonan-5000",
         "query":  "Shonan Monorail 5000 series train",
         "fileTitle":  "File:Shonan-Monorail Series5000-5608.jpg"
+    },
+    {
+        "id":  "osaka-400",
+        "query":  "Osaka Metro 400 series train",
+        "fileTitle":  "File:400 Series EMU.jpg"
+    },
+    {
+        "id":  "osaka-30000",
+        "query":  "Osaka Metro 30000 series Midosuji Line train"
+    },
+    {
+        "id":  "osaka-66",
+        "query":  "Osaka Metro 66 series Sakaisuji Line train"
+    },
+    {
+        "id":  "osaka-80",
+        "query":  "Osaka Metro 80 series Imazatosuji Line train"
+    },
+    {
+        "id":  "osaka-newtram-200",
+        "query":  "Osaka Metro 200 series New Tram",
+        "fileTitle":  "File:Osaka Metro 200 Series 201-08F.jpg"
+    },
+    {
+        "id":  "kyoto-20",
+        "query":  "Kyoto Subway 20 series train"
+    },
+    {
+        "id":  "kobe-6000",
+        "query":  "Kobe Municipal Subway 6000 series train"
+    },
+    {
+        "id":  "nagoya-n1000",
+        "query":  "Nagoya Municipal Subway N1000 train"
+    },
+    {
+        "id":  "fukuoka-4000",
+        "query":  "Fukuoka City Subway 4000 series train",
+        "fileTitle":  "File:Fukuoka City Subway Series 4000 at Meinohama Station (20241027 Opening Day).jpg"
+    },
+    {
+        "id":  "sendai-3000",
+        "query":  "Sendai Subway 3000 series train",
+        "fileTitle":  "File:Sendai Subway Series3000.jpg"
+    },
+    {
+        "id":  "sapporo-9000",
+        "query":  "Sapporo Subway 9000 series train",
+        "fileTitle":  "File:Sapporo 9000 9001 Odori 20150521.jpg"
+    },
+    {
+        "id":  "jrwest-223-2000",
+        "query":  "JR West 223-2000 series train"
+    },
+    {
+        "id":  "jrwest-321",
+        "query":  "JR West 321 series train"
+    },
+    {
+        "id":  "jrwest-227-1000",
+        "query":  "JR West 227-1000 series train"
+    },
+    {
+        "id":  "jrwest-227-500",
+        "query":  "JR West 227-500 Urara train"
+    },
+    {
+        "id":  "jrwest-227-0",
+        "query":  "JR West 227 Red Wing train"
+    },
+    {
+        "id":  "jrkyushu-821",
+        "query":  "JR Kyushu 821 series train"
+    },
+    {
+        "id":  "jrh-737",
+        "query":  "JR Hokkaido 737 series train"
+    },
+    {
+        "id":  "osaka-monorail-3000",
+        "query":  "Osaka Monorail 3000 series train"
+    },
+    {
+        "id":  "chiba-monorail-0",
+        "query":  "Chiba Urban Monorail 0 series train",
+        "fileTitle":  "File:Chiba Urban Monorail 0 series 20120809.jpg"
+    },
+    {
+        "id":  "yuirail-1000",
+        "query":  "Okinawa Monorail 1000 series train"
+    },
+    {
+        "id":  "kitakyushu-1000",
+        "query":  "Kitakyushu Monorail 1000 series train",
+        "fileTitle":  "File:Kitakyushu Monorail 1000 series 1101F.jpg"
+    },
+    {
+        "id":  "portliner-2000",
+        "query":  "Kobe New Transit 2000 series train",
+        "fileTitle":  "File:KNT2000 the first exterior.jpg"
+    },
+    {
+        "id":  "astram-7000",
+        "query":  "Astram Line 7000 series train",
+        "fileTitle":  "File:HRT70-31.JPG"
+    },
+    {
+        "id":  "linimo-100",
+        "query":  "Linimo 100 series train",
+        "fileTitle":  "File:Linimo (標準塗装 Normal) (17690006753).jpg"
     }
 ]

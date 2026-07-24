@@ -62,3 +62,41 @@
 - [東京モノレール 車両紹介](https://www.tokyo-monorail.co.jp/fun/feature.html)
 - [りんかい線 車両紹介](https://www.twr.co.jp/route/tabid/144/Default.aspx)
 - [湘南モノレール 5000系](https://www.shonan-monorail.co.jp/fun/monorail5000.html)
+
+## 全国90車種版で追加確認した公式情報
+
+### 大阪の地下鉄・新交通
+
+- [Osaka Metro 路線情報](https://subway.osakametro.co.jp/station_guide/index.php)
+- [Osaka Metro 400系 運行開始](https://subway.osakametro.co.jp/news/news_release/20230425_400kei_unkoukaishi.php)
+- [Osaka Metro 400系 車両概要](https://subway.osakametro.co.jp/news/news_release/20240523_400kei_laurel_prize.php)
+- [Osaka Metro 御堂筋線30000系・中央線400系](https://subway.osakametro.co.jp/news/news_release/20250625_midosuji_chuo_co2.php)
+- [Osaka Metro ニュートラム200系](https://subway.osakametro.co.jp/news/news_release/20240613_satsueikai_nankoukensha.php)
+- [大阪モノレール 車両紹介](https://www.osaka-monorail.co.jp/know/vehicle/)
+
+### 全国の地下鉄
+
+- [京都市営地下鉄20系](https://www.city.kyoto.lg.jp/kotsu/page/0000296682.html)
+- [神戸市営地下鉄6000形](https://kotsu.city.kobe.lg.jp/subway/subway-vehicles/6000kei/)
+- [名古屋市営地下鉄N1000形](https://www.kotsu.city.nagoya.jp/rp/about/trp0001489.htm)
+- [福岡市地下鉄4000系](https://subway.city.fukuoka.lg.jp/subway/about/vehicles_5.php)
+- [仙台市地下鉄3000系](https://www.kotsu.city.sendai.jp/subway/namboku_sharyou_p1/namboku_sharyou_p2/)
+- [札幌市営地下鉄の概要](https://www.city.sapporo.jp/st/subway/gaiyo/gaiyo.html)
+
+### JR在来線
+
+- [JR西日本 227系1000代](https://www.westjr.co.jp/press/article/2019/03/page_13915.html)
+- [JR西日本 223系2000番台](https://www.westjr.co.jp/press/article/2026/01/page_29975.html)
+- [JR西日本 227系 Red Wing](https://www.westjr.co.jp/press/article/2015/03/page_6919.html)
+- [JR西日本 227系 Urara（PDF）](https://www.westjr.co.jp/press/article/items/231101_00_press_227Urara.pdf)
+- [JR九州 821系](https://www.jrkyushu.co.jp/company/esg/env/management3.html)
+- [JR北海道 737系（PDF）](https://www.jrhokkaido.co.jp/CM/Info/press/pdf/230413_KO_0520_737.pdf)
+
+### モノレール・新交通
+
+- [千葉都市モノレール0形](https://chiba-monorail.co.jp/index.php/about-monorail/sharyou/good-design-award/)
+- [ゆいレール 車両・路線概要](https://www.yui-rail.co.jp/yuirail/about/)
+- [北九州モノレール 会社・路線概要](https://www.kitakyushu-monorail.co.jp/summary/)
+- [神戸新交通 車両・システム](https://www.knt-liner.co.jp/company/system/)
+- [アストラムライン 車両Q&A](https://www.astramline.co.jp/qa/?qid=52)
+- [リニモの特徴](https://www.linimo.jp/language/en/about/)
