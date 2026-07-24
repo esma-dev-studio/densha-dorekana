@@ -1,5 +1,6 @@
 import './styles.css'
 import './design-v3.css'
+import './home-simple.css'
 import './furigana.css'
 import { difficultyLabels, trainById, trains } from './data/trains.js'
 import {
@@ -25,6 +26,7 @@ import {
 } from './storage.js'
 import { playSound } from './audio.js'
 import { applyFurigana, createFuriganaEntries } from './furigana.js'
+import { simpleHomeMarkup } from './home-simple.js'
 
 const app = document.querySelector('#app')
 const dataErrors = validateTrainData(trains)
@@ -149,9 +151,6 @@ const renderHome = () => {
   const rank = rankProgress()
   const learned = trains.filter((train) => (progress.trainStats[train.id]?.correct ?? 0) > 0).length
   const mastered = trains.filter((train) => masteryLevel(progress.trainStats[train.id]) === 3).length
-  const nextAction = reviewIds.length
-    ? { eyebrow: 'おすすめ', title: '苦手な電車を3両だけ復習', note: 'まちがいが多い電車から出題します。', action: 'review' }
-    : { eyebrow: 'おすすめ', title: 'まずは「かんたん」10問', note: '有名な新幹線・特急から見分け方を覚えよう。', action: 'easy' }
   const difficultyCards = Object.entries(difficultyLabels).map(([key, item], index) => `
     <button class="difficulty-card" data-start="${key}" style="--level-color:${item.color}">
       <span class="level-index">0${index + 1}</span>
@@ -159,78 +158,25 @@ const renderHome = () => {
       <span class="level-score">最高<br><b>${progress.bestScores[key]}</b> pt</span>
     </button>`).join('')
 
-  shell(`
-    <section class="home-hero">
-      <div class="hero-copy">
-        <p class="hero-kicker"><span aria-hidden="true">●</span> ${trains.length}しゅるいの電車に会える！</p>
-        <h1>どの電車か、<br><em>わかるかな？</em></h1>
-        <p>写真の「色・かたち・ライト」をよく見て、電車の名前や走る路線を当てよう。遊ぶほど、電車博士に近づくよ。</p>
-        <button class="primary-action hero-action" data-start="easy"><span class="action-icon" aria-hidden="true">▶</span><span class="action-copy"><small>まずは かんたん10問</small><strong>電車クイズに出発！</strong></span><span class="action-arrow" aria-hidden="true">→</span></button>
-        <div class="hero-facts" aria-label="アプリの特長"><span><b>${trains.length}</b>種類</span><span><b>3</b>レベル</span><span><b>2</b>分から</span></div>
-      </div>
-      <div class="hero-photo">
-        ${trainImage(heroTrain, '', true)}
-        <div class="departure-board"><small>今日のおすすめ</small><strong>かんたんクイズ</strong><span>全10問・約5分</span></div>
-        <button class="photo-credit-link" data-view="credits">写真について</button>
-      </div>
-    </section>
-
-    ${savedSession ? `<section class="resume-banner"><div><small>つづきがあります</small><strong>${savedSession.label || (savedSession.mode === 'review' ? '復習モード' : difficultyLabels[savedSession.difficulty]?.label)}・${savedSession.currentIndex + 1}問目</strong></div><button id="resume-session">つづきから</button><button id="discard-session" class="text-button">最初から</button></section>` : ''}
-
-    <section class="home-missions" aria-label="今日のチャレンジと学習パスポート">
-      <article class="daily-card ${dailyDone ? 'is-complete' : ''}">
-        <div class="mission-icon" aria-hidden="true">${dailyDone ? '✓' : '3'}</div>
-        <div><p>DAILY EXPRESS ／ ${dateKey.replaceAll('-', '.')}</p><h2>${dailyDone ? '今日の3問 クリア！' : '今日の3問'}</h2><span>${dailyDone ? `${progress.daily.streak}日連続乗車中。明日も新しい3問が届きます。` : 'かんたん・ふつう・むずかしいから1問ずつ。約2分で遊べます。'}</span></div>
-        <button id="start-daily">${dailyDone ? 'もう一度あそぶ' : '今日の列車に乗る'} <span>→</span></button>
-      </article>
-      <article class="passport-card">
-        <div class="passport-top"><div><small>TRAIN PASSPORT</small><strong>LV.${rank.level} ${rank.name}</strong></div><span>${progress.xp} XP</span></div>
-        <div class="rank-progress" role="progressbar" aria-label="次のレベルまで" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${rank.value}"><i style="width:${rank.value}%"></i></div>
-        <div class="passport-stats"><span>発見 <b>${learned}/${trains.length}</b></span><span>マスター <b>${mastered}/${trains.length}</b></span><span>連続乗車 <b>${progress.daily.streak}日</b></span></div>
-      </article>
-      <article class="recommend-card">
-        <p>${nextAction.eyebrow}</p><h2>${nextAction.title}</h2><span>${nextAction.note}</span>
-        <button data-recommend="${nextAction.action}">おすすめを始める →</button>
-      </article>
-    </section>
-
-    <section class="level-section" aria-labelledby="level-title">
-      <div class="section-heading"><div><p>3つの路線からえらぼう</p><h2 id="level-title">どのコースに乗る？</h2></div><span>各コース10問・同じ問題は出ません</span></div>
-      <div class="quiz-format-guide" aria-label="出題ルール">
-        <span>出題ルール</span>
-        <p><strong>新幹線・特急</strong><small>E5系 はやぶさ、小田急50000形 VSEなど</small>形式＋愛称を当てる</p>
-        <p><strong>通勤電車・地下鉄</strong><small>山手線、中央線快速、半蔵門線など</small>主に走る路線を当てる</p>
-      </div>
-      <div class="difficulty-list">${difficultyCards}</div>
-    </section>
-
-    <section class="theme-section" aria-labelledby="theme-title">
-      <div class="section-heading"><div><p>好きからはじめるミニクイズ</p><h2 id="theme-title">テーマで遊ぶ</h2></div><span>5問だけのショートコース</span></div>
-      <div class="theme-grid">${Object.entries(themeCourses).map(([key, course]) => `
-        <button class="theme-card" data-theme="${key}">
-          <span aria-hidden="true">${course.icon}</span><div><strong>${course.label}</strong><small>${course.note}</small></div><b>5問 →</b>
-        </button>`).join('')}</div>
-    </section>
-
-    <section class="home-grid">
-      <article class="review-panel">
-        <p class="panel-kicker">もう一度見れば、きっと分かる</p><h2>まちがえた電車に<br>リベンジしよう！</h2>
-        <p>${reviewIds.length ? `${reviewIds.length}種類の苦手な電車があります。間違いの多い順に出題します。` : 'クイズで間違えた電車が、ここに自動で集まります。'}</p>
-        <button id="start-review" ${reviewIds.length ? '' : 'disabled'}>復習モードを始める <span>${reviewIds.length}両</span></button>
-      </article>
-      <article class="quick-stats">
-        <div><small>PLAY</small><strong>${progress.plays}</strong><span>回遊んだ</span></div>
-        <div><small>ACCURACY</small><strong>${totalRate}<i>%</i></strong><span>累計正答率</span></div>
-        <div><small>STREAK</small><strong>${progress.maxStreak}</strong><span>最大連続正解</span></div>
-        <button data-view="stats">くわしい成績を見る →</button>
-      </article>
-      <article class="library-teaser">
-        <div><p class="panel-kicker">見つけた電車をコレクション</p><h2>${trains.length}種類の電車ずかん</h2><p>新幹線から地方私鉄まで、見分け方と豆知識を収録。</p><button data-view="collection">ずかんを見にいく →</button></div>
-        <div class="mini-line-map" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-      </article>
-    </section>
-  `, 'home-page')
-
+  const savedSessionSummary = savedSession ? {
+    label: savedSession.label || (savedSession.mode === 'review' ? '復習モード' : difficultyLabels[savedSession.difficulty]?.label),
+    questionNumber: savedSession.currentIndex + 1,
+  } : null
+  shell(simpleHomeMarkup({
+    trainCount: trains.length,
+    heroImage: trainImage(heroTrain, '', true),
+    savedSession: savedSessionSummary,
+    dailyDone,
+    dailyStreak: progress.daily.streak,
+    dateKey,
+    reviewCount: reviewIds.length,
+    difficultyCards,
+    themeCourses,
+    rank,
+    learned,
+    mastered,
+    totalRate,
+  }), 'home-page')
   document.querySelectorAll('[data-start]').forEach((button) => button.addEventListener('click', () => startQuiz(button.dataset.start)))
   document.querySelectorAll('[data-theme]').forEach((button) => button.addEventListener('click', () => startTheme(button.dataset.theme)))
   document.querySelector('#start-daily')?.addEventListener('click', startDaily)
